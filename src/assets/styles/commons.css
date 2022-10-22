@@ -1,0 +1,15 @@
+.hoverable {
+    user-select: none;
+}
+
+.hoverable a,
+.hoverable a svg  {
+    color: var(--text);
+    transition: .2s;
+}
+
+.hoverable a:hover,
+.hoverable a:hover svg {
+    color: var(--tertiary);
+    transition: .2s;
+}

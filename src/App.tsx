@@ -1,13 +1,11 @@
-import React from 'react';
-import logo from './logo.png';
 import './App.css';
+import Sidebar from './components/Sidebar/Sidebar';
+import 'assets/styles/commons.css'
 
 function App() {
   return (
     <div className="app">
-      <div className='sidebar'>
-        1
-      </div>
+      <Sidebar />
       <div>
         Content
       </div>

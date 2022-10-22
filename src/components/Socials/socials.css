@@ -1,0 +1,9 @@
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials a {
+    margin: 0 4px;
+    transition: .2s;
+}

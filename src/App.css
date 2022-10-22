@@ -3,13 +3,10 @@ body {
   font-family: 'Montserrat', serif;
 }
 
-.app {
-  display: flex;
+* {
+  box-sizing: border-box;
 }
 
-.sidebar {
-  height: 100vh;
-  min-width: 300px;
-  background-color: #272829;
-  padding: 1rem;
+.app {
+  display: flex;
 }
