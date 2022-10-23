@@ -1,0 +1,96 @@
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+    color: var(--text);
+}
+
+.full-name {
+    width: 100%;
+}
+
+.profession-wrapper {
+    margin-top: 0;
+}
+
+.profession {
+    border-bottom: 4px solid var(--tertiary);
+    padding-bottom: 4px;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.blinking {
+    -webkit-animation: fadeInFromNone 700ms infinite;
+    -moz-animation: fadeInFromNone 700ms infinite;
+    -o-animation: fadeInFromNone 700ms infinite;
+    animation: fadeInFromNone 700ms infinite;
+}
