@@ -6,8 +6,9 @@
 }
 
 .content-section {
-    padding: 60px 12px;
     background-color: var(--text);
+    padding: 60px;
+    width: 100%;
 }
 
 .content-section-title {

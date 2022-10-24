@@ -1,12 +1,14 @@
 import './resume.css'
 
-type T_ResumeSectionProps = {
+export type T_ResumeSectionProps = {
     title: string
     children: ({
         id: string
         title: string
         info: string
-        markup: JSX.Element | JSX.Element[]
+        activityStart?: string 
+        activityEnd?: string 
+        markup?: JSX.Element
     })[]
 }
 
@@ -18,8 +20,14 @@ const ResumeSection = ({ title, children }: T_ResumeSectionProps) => {
             {
                 children.map(section => {
                     return (
-                        <div className='resume-section-item'>
+                        <div key={section.id} className='resume-section-item'>
                             <h4 className='resume-section-item-title'>{section.title}</h4>
+                            {
+                                !!section.activityStart &&
+                                <span className='resume-section-item-activity-duration'>
+                                    {`${section.activityStart} - ${section.activityEnd}`}
+                                </span>
+                            }
                             <p className='resume-section-initial-info'>
                                 {section.info}
                             </p>

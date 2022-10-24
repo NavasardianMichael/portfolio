@@ -1,25 +1,31 @@
 import ContentSection from "components/Content/ContentSection";
+import { RESUME_EXPERIENCE_TEMPLATE, RESUME_TEMPLATE_LEFT } from "constants/resume";
 import ResumeSection from "./ResumeSection";
-import Summary from "./Sections/Summary";
-import './resume.css'
+import './resume.css';
 
 type T_Props = {}
 
 const Resume: React.FC<T_Props> = (props) => {
   return (
     <ContentSection id='resume' title='Resume'>
-        <ResumeSection title='Summary'>
-            {
-                [
-                    {
-                        id: 'short-bio',
-                        title: 'Michael Navasardyan',
-                        info: 'Experienced Front-End Engineer',
-                        markup: <Summary />
-                    }
-                ]
-            }
-        </ResumeSection>
+        <div className='resume-wrapper'>
+            <div className='resume-left-part'>
+                {
+                    RESUME_TEMPLATE_LEFT.map(section => {
+                        return (
+                            <ResumeSection key={section.title} title={section.title}>
+                                {section.children}
+                            </ResumeSection>
+                        )
+                    })
+                }
+            </div>
+            <div className='resume-right-part'>
+                <ResumeSection title='Professional Experience'>
+                    {RESUME_EXPERIENCE_TEMPLATE}
+                </ResumeSection>
+            </div>
+        </div>
     </ContentSection>
   );
 };

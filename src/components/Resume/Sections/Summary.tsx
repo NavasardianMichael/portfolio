@@ -7,7 +7,7 @@ const Summary: React.FC<T_Props> = (props) => {
         Eghishe Tadevosyan 5, Yerevan, Armenia
       </li>
       <li>
-        +37498751615
+        +374 98 75 16 15
       </li>
       <li>
         navasardianmichael@gmail.com

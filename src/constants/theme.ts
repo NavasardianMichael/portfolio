@@ -21,10 +21,10 @@ export const THEMES: {
         secondary: '#2c2f3f',
         tertiary: '#149ddd',
         quaternary: '#173b6c',
-        text: '#efefef',
+        text: '#ffff',
     },
     [E_THEME.dark]: {
-        primary: '#efefef',
+        primary: '#ffff',
         secondary: '#2c2f3f',
         tertiary: '#149ddd',
         quaternary: '#173b6c',
