@@ -7,6 +7,7 @@ export enum E_THEME_PARAMS {
     primary = 'primary', 
     secondary = 'secondary', 
     tertiary = 'tertiary', 
+    quaternary = 'quaternary', 
     text = 'text', 
 }
 
@@ -19,12 +20,14 @@ export const THEMES: {
         primary: '#040b14',
         secondary: '#2c2f3f',
         tertiary: '#149ddd',
-        text: '#efefef'
+        quaternary: '#173b6c',
+        text: '#efefef',
     },
     [E_THEME.dark]: {
         primary: '#efefef',
         secondary: '#2c2f3f',
         tertiary: '#149ddd',
+        quaternary: '#173b6c',
         text: '#040b14',
     },
 }

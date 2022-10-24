@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { createTheme } from "@mui/system";
+import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material";
 import { THEMES } from "constants/theme";
 import { setCssVariables } from "helpers/styles";

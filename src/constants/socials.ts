@@ -2,6 +2,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 export const SOCIALS = [
     {
@@ -23,5 +24,10 @@ export const SOCIALS = [
         id: 'mail',
         href: 'mailto:navasardianmichael@gmail.com',
         icon: MailIcon
+    },
+    {
+        id: 'phone',
+        href: 'callto:+37498751615',
+        icon: PhoneIcon
     },
 ]

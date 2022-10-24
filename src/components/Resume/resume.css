@@ -1,0 +1,31 @@
+.resume-section-item {
+    border-left: 2px solid #1f5297;
+    padding-left: 20px;
+    position: relative;
+}
+
+.resume-section-item::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--text);
+    border: 2px solid #1f5297;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    transform: translate(-50%);
+}
+
+.resume-secion-title {
+    font-size: 26px;
+    color: #050d18;
+    margin-bottom: 20px;
+}
+
+.resume-section-item-title {
+    margin-top: 0;
+    font-size: 18px;
+    color: #050d18;
+    margin-bottom: 10px;
+}

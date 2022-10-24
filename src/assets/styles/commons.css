@@ -1,3 +1,13 @@
+::-moz-selection { /* Code for Firefox */
+    background: var(--tertiary);
+    color: var(--text);
+}
+
+::selection {
+    background: var(--tertiary);
+    color: var(--text);
+}
+
 .hoverable {
     user-select: none;
 }

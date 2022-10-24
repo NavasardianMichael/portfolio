@@ -1,4 +1,21 @@
 .content {
-    padding-left: 300px;
     width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.content-section {
+    padding: 60px 12px;
+    background-color: var(--text);
+}
+
+.content-section-title {
+    display: inline-block;
+    font-size: 32px;
+    padding-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 4px solid var(--tertiary);
+    color: var(--quaternary);
 }
