@@ -1,16 +1,16 @@
-import ContentSection from "components/Content/ContentSection";
 import './resume.css'
 
-type T_Props = {
+type T_ResumeSectionProps = {
     title: string
     children: ({
         id: string
         title: string
-        markup: JSX.Element
+        info: string
+        markup: JSX.Element | JSX.Element[]
     })[]
 }
 
-const ResumeSection: React.FC<T_Props> = ({ title, children }) => {
+const ResumeSection = ({ title, children }: T_ResumeSectionProps) => {
   return (
     <div className='resume-section'>
         <h3 className='resume-secion-title'>{title}</h3>
@@ -20,6 +20,9 @@ const ResumeSection: React.FC<T_Props> = ({ title, children }) => {
                     return (
                         <div className='resume-section-item'>
                             <h4 className='resume-section-item-title'>{section.title}</h4>
+                            <p className='resume-section-initial-info'>
+                                {section.info}
+                            </p>
                             {section.markup}
                         </div>
                     )
