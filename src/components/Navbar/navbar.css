@@ -6,7 +6,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 1rem 1.25rem;
 }
 
 .navbar a svg {

@@ -8,7 +8,8 @@ type T_Props = {}
 const Publications: React.FC<T_Props> = (props) => {
   return (
     <ContentSection id='publications' title='Publications'>
-        <Card sx={{width: '30%'}}>
+        <Card className='card'>
+            {PUBLICATIONS}
             <CardContent>
                 <h3>The role of efficiency in the economic growth quality generation and manifestation processes</h3>
                 <p>

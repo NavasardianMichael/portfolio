@@ -1,7 +1,6 @@
 import { FC } from 'react';
-import HomeIcon from '@mui/icons-material/Home';
-import './navbar.css'
 import { SECTIONS } from 'constants/sections';
+import './navbar.css'
 
 type T_Props = {}
 

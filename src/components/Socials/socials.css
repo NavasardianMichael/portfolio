@@ -4,6 +4,6 @@
 }
 
 .socials a {
-    margin: 0 8px;
+    padding: 0 .5rem;
     transition: .2s;
 }
