@@ -1,3 +1,11 @@
 .publications-wrapper {
-    background-color: #f5f8fd;
+    /* background-color: #f5f8fd; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.publication-card {
+    box-sizing: border-box;
+    width: calc(25% - ((3 * 20px) / 4));
 }
