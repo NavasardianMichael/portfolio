@@ -24,17 +24,12 @@ const Publications: React.FC<T_Props> = (props) => {
                                     {pub.title}
                                 </h3>
                                 <p>
-                                    {`"${pub.journal}"`}
+                                    {`"${pub.journal}" · ${pub.date}`}
                                 </p>
-                                <p>
-                                    {pub.date}
-                                </p>
-                            </CardContent>
-                            <CardActions>
                                 <Button onClick={() => handleClick(pub.link)} startIcon={<OpenInNewIcon />} size='small'>
                                     See Publication
                                 </Button>
-                            </CardActions>
+                            </CardContent>
                         </Card>
                     )
                 })

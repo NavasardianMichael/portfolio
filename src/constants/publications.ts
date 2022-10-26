@@ -34,4 +34,32 @@ export const PUBLICATIONS = [
         date: 'January, 2021',
         link: 'http://geopolitika.am/dir/wp-content/blogs.dir/1/files/2021_1_116_121.pdf'
     },
+    {
+        id: 7,
+        title: 'Prosperity index: prosperity indicators of RA',
+        journal: 'Region and World',
+        date: 'March, 2020',
+        link: 'http://geopolitika.am/dir/wp-content/blogs.dir/1/files/2019.2_120_123.pdf'
+    },
+    {
+        id: 8,
+        title: 'Analysis of the level of dollarization and the factors influencing it in Armenia',
+        journal: 'Region and World',
+        date: 'January, 2020',
+        link: 'http://geopolitika.am/dir/wp-content/blogs.dir/1/files/2020_5_167_171.pdf'
+    },
+    {
+        id: 9,
+        title: 'The internal debt of the Republic of Armenia and the direction of its movement',
+        journal: 'Alternative',
+        date: 'December, 2019',
+        link: 'http://alternative.am/wp-content/uploads/2020/04/%D5%84%D5%A1%D6%80%D5%BF-2020.pdf?fbclid=IwAR2ZWJAIrLd9xFt4HuUwvKEPkelAlKtN4WDyqAFaPnLMdFJ0rAm8RVONvEM,%20p.%20407'
+    },
+    {
+        id: 10,
+        title: 'Life quality in Republic of Armenia',
+        journal: 'Region and World',
+        date: 'January, 2019',
+        link: 'http://geopolitika.am/dir/wp-content/blogs.dir/1/files/2019.3_114_117.pdf'
+    },
 ]

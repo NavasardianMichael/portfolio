@@ -27,7 +27,7 @@ const Resume: React.FC<T_Props> = (props) => {
             </div>
         </div>
     </ContentSection>
-  );
-};
+  )
+}
 
-export default Resume;
+export default Resume

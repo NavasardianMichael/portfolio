@@ -1,0 +1,42 @@
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 26px;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: auto;
+}
+
+.contact-card {
+    width: calc(50% - 10px);
+}
+
+.half-width {
+    width: calc(50% - 8px);
+}
+
+.form-submit-btn {
+    all: unset;
+    padding: .5rem 2rem;
+    background-color: var(--tertiary);
+    color: var(--text);
+    cursor: pointer;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1276px) {
+    .contact-card {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .half-width {
+        width: 100%;
+    }
+}

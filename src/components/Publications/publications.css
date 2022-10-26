@@ -1,11 +1,39 @@
+:root {
+    --gap: 20px
+}
+
 .publications-wrapper {
     /* background-color: #f5f8fd; */
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: var(--gap);
+    margin-top: 26px;
 }
 
 .publication-card {
-    box-sizing: border-box;
-    width: calc(25% - ((3 * 20px) / 4));
+    width: calc((100% / 5) - ((4 * var(--gap)) / 5));
+}
+
+@media only screen and (max-width: 1540px) {
+    .publication-card {
+        width: calc((100% / 4) - ((3 * var(--gap)) / 4));
+    }
+}
+
+@media only screen and (max-width: 1276px) {
+    .publication-card {
+        width: calc((100% / 3) - ((2 * var(--gap)) / 3));
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .publication-card {
+        width: calc((100% / 2) - ((1 * var(--gap)) / 2));
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .publication-card  {
+        width: 100%;
+    }
 }
