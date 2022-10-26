@@ -1,4 +1,4 @@
-import avatar from 'assets/images/fake-avatar.jpg'
+import avatar from 'assets/images/avatar.JPEG'
 import './bgAvatar.css'
 
 type T_Props = {}

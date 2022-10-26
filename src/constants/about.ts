@@ -5,15 +5,15 @@ export const ABOUT_ITEMS = [
     },
     {
         key: 'age',
-        value: 30
+        value: 24
     },
     {
-        key: 'website',
-        value: '#'
+        key: 'academic Degree',
+        value: 'Ph.D.'
     },
     {
-        key: 'degree',
-        value: 'PhD'
+        key: 'profficiency Level',
+        value: 'Middle'
     },
     {
         key: 'phone',
@@ -24,7 +24,7 @@ export const ABOUT_ITEMS = [
         value: 'navasardianmichael@gmail.com'
     },
     {
-        key: 'city',
+        key: 'address',
         value: 'Yerevan, Armenia'
     },
 ]

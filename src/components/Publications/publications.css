@@ -34,6 +34,18 @@
 
 @media only screen and (max-width: 768px) {
     .publication-card  {
+        width: calc((100% / 3) - ((2 * var(--gap)) / 3));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .publication-card  {
+        width: calc((100% / 2) - ((1 * var(--gap)) / 2));
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .publication-card  {
         width: 100%;
     }
 }

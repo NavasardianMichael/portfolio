@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Card, CardContent, TextField } from '@mui/material'
 import ContentSection from 'components/Content/ContentSection'
-import { T_MailOptions } from 'helpers/email';
+import { sendEmail, T_MailOptions } from 'helpers/email';
 import { FIELDS } from 'constants/emails';
 import './contact.css'
 import { THEMES } from 'constants/theme';
