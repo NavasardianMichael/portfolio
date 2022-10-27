@@ -4,7 +4,8 @@ import './navbar.css'
 
 type T_Props = {}
 
-const Navbar: FC<T_Props> = (props) => {
+const Navbar: FC<T_Props> = () => {
+
   return (
     <div className='navbar hoverable'>
         {

@@ -1,13 +1,6 @@
 .sidebar {
-  height: 100vh;
   min-width: 300px;
   background-color: #040b14;
   padding: 30px 0;
   position: relative;
-}
-
-@media only screen and (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
 }

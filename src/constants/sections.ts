@@ -30,10 +30,5 @@ export const SECTIONS = [
         id: 'publications',
         name: 'Publications',
         icon: CollectionsBookmarkIcon,
-    },
-    {
-        id: 'contact',
-        name: 'Contact',
-        icon: MailIcon,
-    },
+    }
 ]

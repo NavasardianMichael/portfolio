@@ -11,14 +11,8 @@ body {
   display: flex;
 }
 
-@media only screen and (max-width: 1368px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  html {
-    font-size: 12px;
+@media only screen and (max-width: 768px) {
+  .app {
+    flex-wrap: wrap;
   }
 }

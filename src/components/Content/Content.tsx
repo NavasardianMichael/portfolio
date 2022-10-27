@@ -1,5 +1,4 @@
 import About from "components/About/About";
-import Contact from "components/Contact/Contact";
 import Home from "components/Home/Home";
 import Publications from "components/Publications/Publications";
 import Resume from "components/Resume/Resume";
@@ -16,7 +15,6 @@ const Content: React.FC<T_Props> = (props) => {
       <Skills />
       <Resume />
       <Publications />
-      <Contact />
     </div>
   );
 };
