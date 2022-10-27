@@ -4,14 +4,16 @@ import Navbar from 'components/Navbar/Navbar'
 import Socials from 'components/Socials/Socials'
 import './sidebar.css'
 
-type T_Props = {}
+type T_Props = {
+  closePortal?: () => void
+}
 
-export default function Sidebar (props: T_Props) {
+export default function Sidebar ({ closePortal }: T_Props) {
   return (
     <div className='sidebar'>
       <Avatar />
       <Socials />
-      <Navbar />
+      <Navbar closePortal={closePortal} />
       <Footer />
     </div>
   )

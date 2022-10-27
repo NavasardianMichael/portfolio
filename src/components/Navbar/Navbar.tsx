@@ -2,9 +2,15 @@ import { FC } from 'react';
 import { SECTIONS } from 'constants/sections';
 import './navbar.css'
 
-type T_Props = {}
+type T_Props = {
+    closePortal?: () => void
+}
 
-const Navbar: FC<T_Props> = () => {
+const Navbar: FC<T_Props> = ({ closePortal }) => {
+
+    const handleClick = () => {
+        closePortal?.()
+    }
 
   return (
     <div className='navbar hoverable'>
@@ -12,7 +18,7 @@ const Navbar: FC<T_Props> = () => {
             SECTIONS.map(section => {
                 const Icon = section.icon
                 return (
-                    <a key={section.id} href={`#${section.id}`}>
+                    <a onClick={handleClick} key={section.id} href={`#${section.id}`}>
                         <Icon color='secondary' /> {section.name}
                     </a>
                 )

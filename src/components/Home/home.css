@@ -94,14 +94,3 @@
     -o-animation: fadeInFromNone 700ms infinite;
     animation: fadeInFromNone 700ms infinite;
 }
-
-@media only screen and (max-width: 768px) {
-    .home {
-        align-items: center;
-        padding-left: 0;
-    }
-    .full-name {
-        width: 100%;
-        text-align: center;
-    }
-}
