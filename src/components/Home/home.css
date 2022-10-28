@@ -7,7 +7,7 @@
     color: var(--text);
 }
 
-.full-name {
+.home-full-name {
     width: 100%;
 }
 
@@ -93,4 +93,15 @@
     -moz-animation: fadeInFromNone 700ms infinite;
     -o-animation: fadeInFromNone 700ms infinite;
     animation: fadeInFromNone 700ms infinite;
+}
+
+@media only screen and (max-width: 768px) {
+    .home {
+        padding-left: 5%;
+    }
+}
+@media only screen and (max-width: 769px) and (hover: none) {
+    .home-full-name {
+        margin-top: -100px;
+    }
 }

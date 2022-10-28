@@ -18,8 +18,11 @@
     transition: .2s;
 }
 
-.hoverable a:hover,
-.hoverable a:hover svg {
-    color: var(--tertiary);
-    transition: .2s;
+@media (hover: hover) {
+    
+    .hoverable a:hover,
+    .hoverable a:hover svg {
+        color: var(--tertiary);
+        transition: .2s;
+    }
 }

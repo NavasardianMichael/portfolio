@@ -3,4 +3,17 @@
   background-color: #040b14;
   padding: 30px 0;
   position: relative;
+  overflow: hidden;
+}
+
+.sidebar.closed {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: .2s ease-out;
+}
+
+.sidebar.opened {
+  opacity: 1;
+  transform: translateY(0);
+  transition: .2s ease-in;
 }

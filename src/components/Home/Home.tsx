@@ -43,13 +43,12 @@ const Home: React.FC<T_Props> = (props) => {
 
     return (
         <div id='home' className='home'>
-            <h1 className='full-name'>Michael Navasardyan</h1>
+            <h1 className='home-full-name'>Michael Navasardyan</h1>
             <h2 className='profession-wrapper'>
                 I'm{HTML_SYMBOLS.space}
                 <span className='profession'>{texts[currentTextIndex].slice(0, currentTextPosition)}</span>
                 <span className={blinkingClassName}>|</span>
             </h2>
-            
         </div>
     );
 };

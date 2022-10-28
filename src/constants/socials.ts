@@ -27,7 +27,7 @@ export const SOCIALS = [
     },
     {
         id: 'phone',
-        href: 'callto:+37498751615',
+        href: 'tel:+37498751615',
         icon: PhoneIcon
     },
 ]

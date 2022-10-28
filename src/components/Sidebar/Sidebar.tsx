@@ -6,11 +6,12 @@ import './sidebar.css'
 
 type T_Props = {
   closePortal?: () => void
+  className?: string
 }
 
-export default function Sidebar ({ closePortal }: T_Props) {
+export default function Sidebar ({ className, closePortal }: T_Props) {
   return (
-    <div className='sidebar'>
+    <div className={`sidebar ${className}`}>
       <Avatar />
       <Socials />
       <Navbar closePortal={closePortal} />
