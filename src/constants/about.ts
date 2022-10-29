@@ -1,3 +1,5 @@
+import { calcAge } from "helpers/utils";
+
 export const ABOUT_ITEMS = [
     {
         key: 'birthday',
@@ -5,7 +7,7 @@ export const ABOUT_ITEMS = [
     },
     {
         key: 'age',
-        value: 24
+        value: calcAge('1997-11-24')
     },
     {
         key: 'academic Degree',

@@ -13,6 +13,12 @@
 
 .publication-card {
     width: calc((100% / 5) - ((4 * var(--gap)) / 5));
+    
+}
+
+.publication-card button {
+    font-family: 'Montserrat', serif;
+    height: 100%;
 }
 
 @media only screen and (max-width: 1540px) {

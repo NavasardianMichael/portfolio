@@ -3,3 +3,8 @@ export function decodeHTMLEntities(text: string) {
   textArea.innerHTML = text;
   return textArea.value;
 }
+
+export const calcAge: (d: string) => number = (dateString: string) => {
+  var birthday = +new Date(dateString);
+  return ~~((Date.now() - birthday) / (31557600000));
+}

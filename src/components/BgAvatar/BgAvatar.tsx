@@ -1,4 +1,4 @@
-import avatar from 'assets/images/avatar.jpeg'
+import avatar from 'assets/images/main-avatar.jpeg'
 import './bgAvatar.css'
 
 type T_Props = {}
@@ -6,7 +6,7 @@ type T_Props = {}
 const BgAvatar: React.FC<T_Props> = (props) => {
   return (
     <div className='bgAvatar'>
-        <img src={avatar} />
+      <img src={avatar} />
     </div>
   );
 };
