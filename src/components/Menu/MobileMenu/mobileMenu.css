@@ -6,7 +6,7 @@
 .mobile-menu-open-btn {
   bottom: 30px;
   right: 30px;
-  background-color: var(--tertiary) !important;
+  background-color: var(--contrast) !important;
   padding: 16px !important;
 }
 

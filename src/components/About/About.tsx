@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import avatar from 'assets/images/main-avatar.jpeg'
+import { useTheme } from "@mui/material";
 import ContentSection from 'components/Content/ContentSection';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { THEMES } from 'constants/theme';
@@ -9,6 +10,9 @@ import './about.css'
 type T_Props = {}
 
 const About: FC<T_Props> = (props) => {
+
+  const themeContext = useTheme()
+
   return (
     <ContentSection id='about' title='About'>
         <p className='bio'>
@@ -28,7 +32,7 @@ const About: FC<T_Props> = (props) => {
                   return (
                     <div key={item.key} className='about-main-content-item'>
                       <span>
-                        <ArrowForwardIosIcon sx={{color: THEMES.light.tertiary}} fontSize='small' />
+                        <ArrowForwardIosIcon sx={{color: THEMES[themeContext.palette.mode].contrast}} fontSize='small' />
                       </span>
                       <span className='about-main-content-item-type'>
                         {item.key}:

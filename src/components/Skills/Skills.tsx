@@ -7,11 +7,15 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { SKILLS } from 'constants/skills';
 import { THEMES } from 'constants/theme';
+import { useTheme } from "@mui/material";
 import './skills.css'
 
 type T_Props = {}
 
 const Skills: FC<T_Props> = (props) => {
+
+    const themeContext = useTheme()
+
   return (
     <ContentSection id='skills' title='Skills'>
         <List className='skills-list'>
@@ -20,7 +24,7 @@ const Skills: FC<T_Props> = (props) => {
                     return (
                         <ListItemButton key={skill} className='skill'>
                             <ListItemIcon>
-                                <DoneIcon sx={{ color: THEMES.light.tertiary }} />
+                                <DoneIcon sx={{ color: THEMES[themeContext.palette.mode].contrast }} />
                             </ListItemIcon>
                             <ListItemText primary={skill} />
                         </ListItemButton>

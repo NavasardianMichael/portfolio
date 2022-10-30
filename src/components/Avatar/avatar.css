@@ -16,6 +16,6 @@
 }
 
 .avatar-wrapper .full-name {
-    color: #fff;
+    color: var(--text);
     text-align: center;
 }

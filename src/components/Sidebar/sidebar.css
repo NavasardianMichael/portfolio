@@ -1,7 +1,6 @@
 .sidebar {
   min-width: 300px;
-  background-color: #040b14;
-  position: relative;
+  background-color: var(--primary);
   overflow: hidden;
 }
 

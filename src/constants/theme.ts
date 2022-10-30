@@ -1,14 +1,17 @@
 export enum E_THEME {
-    light= 'light', 
-    dark= 'dark', 
+    light = 'light', 
+    dark = 'dark', 
 }
 
 export enum E_THEME_PARAMS {
-    primary = 'primary', 
+    primary = 'primary',
+    primaryLight = 'primaryLight',
     secondary = 'secondary', 
     tertiary = 'tertiary', 
     quaternary = 'quaternary', 
     text = 'text', 
+    contrast = 'contrast',
+    contrastDark = 'contrastDark'
 }
 
 export const THEMES: {
@@ -17,17 +20,23 @@ export const THEMES: {
     }
 } = {
     [E_THEME.light]: {
-        primary: '#040b14',
-        secondary: '#2c2f3f',
-        tertiary: '#149ddd',
-        quaternary: '#173b6c',
-        text: '#ffff',
-    },
-    [E_THEME.dark]: {
         primary: '#ffff',
-        secondary: '#2c2f3f',
-        tertiary: '#149ddd',
+        primaryLight: '#fffffff2',
+        secondary: '#040b14',
+        tertiary: '#212431',
         quaternary: '#173b6c',
         text: '#040b14',
+        contrast: '#149ddd',
+        contrastDark: '#173b6c'
+    },
+    [E_THEME.dark]: {
+        primary: '#040b14',
+        primaryLight: '#ffff',
+        secondary: '#ffff',
+        tertiary: '#212431',
+        quaternary: '#173b6c',
+        text: '#ffff',
+        contrast: '#149ddd',
+        contrastDark: '#173b6c'
     },
 }

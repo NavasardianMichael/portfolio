@@ -18,11 +18,14 @@
     transition: .2s;
 }
 
+.contrast-dark-title {
+    color: var(--contrastDark);
+}
+
 @media (hover: hover) {
-    
     .hoverable a:hover,
     .hoverable a:hover svg {
-        color: var(--tertiary);
+        color: var(--contrast);
         transition: .2s;
     }
 }

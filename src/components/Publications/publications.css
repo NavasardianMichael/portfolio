@@ -13,7 +13,8 @@
 
 .publication-card {
     width: calc((100% / 5) - ((4 * var(--gap)) / 5));
-    
+    background-color: #ffff !important;
+    color: #040b14 !important;
 }
 
 .publication-card button {

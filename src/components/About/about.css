@@ -31,7 +31,7 @@
     margin-top: 0;
     line-height: 1;
     font-size: 26px;
-    color: var(--quaternary);
+    color: var(--contrastDark);
 }
 
 .about-main-content-item {
