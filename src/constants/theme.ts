@@ -21,9 +21,9 @@ export const THEMES: {
 } = {
     [E_THEME.light]: {
         primary: '#ffff',
-        primaryLight: '#fffffff2',
+        primaryLight: '#ffffffe6',
         secondary: '#040b14',
-        tertiary: '#212431',
+        tertiary: '#ffff',
         quaternary: '#173b6c',
         text: '#040b14',
         contrast: '#149ddd',

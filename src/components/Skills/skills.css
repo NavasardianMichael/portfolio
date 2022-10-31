@@ -7,10 +7,6 @@
     width: 20%;
 }
 
-.skill span {
-    font-family: 'Montserrat', serif;
-}
-
 @media only screen and (max-width: 1276px) {
     .skill {
         width: 25%;

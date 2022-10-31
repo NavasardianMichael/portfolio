@@ -4,6 +4,7 @@ import Publications from "components/Publications/Publications";
 import Resume from "components/Resume/Resume";
 import Skills from "components/Skills/Skills";
 import './content.css'
+import Contributions from "components/Contributions/Contributions";
 
 type T_Props = {}
 
@@ -15,6 +16,7 @@ const Content: React.FC<T_Props> = (props) => {
       <Skills />
       <Resume />
       <Publications />
+      <Contributions />
     </div>
   );
 };

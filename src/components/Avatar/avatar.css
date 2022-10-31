@@ -19,3 +19,15 @@
     color: var(--text);
     text-align: center;
 }
+
+@media only screen and (max-width: 368px) {
+  .avatar-wrapper img {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (hover: none){
+    .avatar-wrapper img {
+        display: none;
+    }
+}

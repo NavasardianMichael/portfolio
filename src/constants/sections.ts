@@ -1,9 +1,9 @@
 import HomeIcon from '@mui/icons-material/Home';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import SourceIcon from '@mui/icons-material/Source';
-import MailIcon from '@mui/icons-material/Mail';
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import PsychologyIcon from '@mui/icons-material/Psychology';
+import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
 
 export const SECTIONS = [
     {
@@ -30,5 +30,10 @@ export const SECTIONS = [
         id: 'publications',
         name: 'Publications',
         icon: CollectionsBookmarkIcon,
+    },
+    {
+        id: 'contributions',
+        name: 'Contributions',
+        icon: DashboardCustomizeIcon,
     }
 ]

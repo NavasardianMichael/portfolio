@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import avatar from 'assets/images/main-avatar.jpeg'
+import avatar from 'assets/images/fake-avatar.jpeg'
 import { useTheme } from "@mui/material";
 import ContentSection from 'components/Content/ContentSection';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';

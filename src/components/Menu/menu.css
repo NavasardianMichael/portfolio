@@ -3,3 +3,9 @@
         width: 100%;
     }
 }
+
+@media (orientation: landscape) and (hover: none){
+    .menu {
+        width: 100%;
+    }
+}

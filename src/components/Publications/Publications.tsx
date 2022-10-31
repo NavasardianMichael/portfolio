@@ -1,32 +1,31 @@
-import { Button, Card, CardActionArea, CardContent } from "@mui/material";
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { useCallback } from 'react'
+import { Card, CardActionArea, CardContent, Typography } from "@mui/material";
 import ContentSection from "components/Content/ContentSection";
 import { PUBLICATIONS } from "constants/publications";
-import './publications.css';
 
 type T_Props = {}
 
 const Publications: React.FC<T_Props> = (props) => {
 
-    const handleClick = (link: string) => {
+    const handleClick = useCallback((link: string) => {
         window.open(link, "_blank")
-    }
+    }, [])
 
   return (
     <ContentSection id='publications' title='Publications'>
-        <div className='publications-wrapper'>
+        <div className='cards-wrapper'>
             {
                 PUBLICATIONS.map(pub => {
                     return (
-                        <Card key={pub.id} className='publication-card' onClick={() => handleClick(pub.link)}>
+                        <Card key={pub.id} className='card' onClick={() => handleClick(pub.link)}>
                             <CardActionArea>
                                 <CardContent>
-                                    <h3>
+                                    <Typography gutterBottom fontWeight={600} variant="body1">
                                         {pub.title}
-                                    </h3>
-                                    <p>
+                                    </Typography>
+                                    <Typography variant="body2">
                                         {`"${pub.journal}" · ${pub.date}`}
-                                    </p>
+                                    </Typography>
                                 </CardContent>
                             </CardActionArea>
                         </Card>

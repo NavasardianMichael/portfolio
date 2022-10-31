@@ -7,3 +7,9 @@
     display: none;
   }
 }
+
+@media (orientation: landscape) and (hover: none){
+  .desktop-menu {
+    display: none;
+  }
+}

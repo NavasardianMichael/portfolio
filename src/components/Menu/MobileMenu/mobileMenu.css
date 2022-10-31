@@ -28,3 +28,9 @@
     display: none;
   }
 }
+
+@media (orientation: landscape) and (hover: none){
+  .mobile-menu {
+    display: block;
+  }
+}
