@@ -9,11 +9,17 @@
     width: 140px;
     height: 140px;
     object-fit: cover;
-    border: 8px solid #2c2f3f;
-    box-shadow: #2c2f3f1f 0px 0px 20px 10px;
     border-radius: 100%;
     box-sizing: border-box;
     margin: auto;
+}
+
+.avatar-wrapper.border img {
+    border: 8px solid #2c2f3f;
+}
+
+.avatar-wrapper.shadow img {
+    box-shadow: #2c2f3f48 0px 0px 25px 8px;
 }
 
 .avatar-wrapper .full-name {
