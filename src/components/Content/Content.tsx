@@ -1,14 +1,13 @@
+import { FC } from "react";
 import About from "components/About/About";
 import Home from "components/Home/Home";
 import Publications from "components/Publications/Publications";
 import Resume from "components/Resume/Resume";
 import Skills from "components/Skills/Skills";
-import './content.css'
 import Contributions from "components/Contributions/Contributions";
+import './content.css'
 
-type T_Props = {}
-
-const Content: React.FC<T_Props> = (props) => {
+const Content: FC = () => {
   return (
     <div className='content'>
       <Home />

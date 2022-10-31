@@ -10,9 +10,7 @@ import { THEMES } from 'constants/theme';
 import { useTheme } from "@mui/material";
 import './skills.css'
 
-type T_Props = {}
-
-const Skills: FC<T_Props> = (props) => {
+const Skills: FC = () => {
 
     const themeContext = useTheme()
 

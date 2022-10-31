@@ -2,9 +2,7 @@ import avatar from 'assets/images/main-avatar.jpeg'
 import { useTheme } from "@mui/material";
 import './avatar.css'
 
-type T_Props = {}
-
-export default function Avatar (props: T_Props) {
+export default function Avatar () {
   const themeContext = useTheme()
   return (
     <div className={`avatar-wrapper ${themeContext.palette.mode === 'light' ? 'shadow' : 'border'}`}>

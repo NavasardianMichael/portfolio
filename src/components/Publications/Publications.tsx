@@ -1,11 +1,9 @@
-import { useCallback } from 'react'
+import { FC, useCallback } from 'react'
 import { Card, CardActionArea, CardContent, Typography } from "@mui/material";
 import ContentSection from "components/Content/ContentSection";
 import { PUBLICATIONS } from "constants/publications";
 
-type T_Props = {}
-
-const Publications: React.FC<T_Props> = (props) => {
+const Publications: FC = () => {
 
     const handleClick = useCallback((link: string) => {
         window.open(link, "_blank")

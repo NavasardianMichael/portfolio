@@ -1,10 +1,7 @@
 import Sidebar from 'components/Sidebar/Sidebar';
 import './desktopMenu.css'
 
-type T_Props = {}
-
-const DesktopMenu = (props: T_Props) => {
-
+const DesktopMenu = () => {
     return (
         <div className='desktop-menu'>
             <Sidebar />

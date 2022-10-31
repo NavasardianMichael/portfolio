@@ -1,4 +1,4 @@
-import { createContext, Dispatch, FC, SetStateAction, useState } from "react";
+import { createContext, FC, useState } from "react";
 
 export const MobileMenuContext = createContext<[boolean, React.Dispatch<React.SetStateAction<boolean>>]>([
     false,

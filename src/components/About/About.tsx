@@ -7,9 +7,7 @@ import { THEMES } from 'constants/theme';
 import { ABOUT_ITEMS } from 'constants/about';
 import './about.css'
 
-type T_Props = {}
-
-const About: FC<T_Props> = (props) => {
+const About: FC = () => {
 
   const themeContext = useTheme()
 

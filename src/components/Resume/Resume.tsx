@@ -1,11 +1,10 @@
+import { FC } from "react";
 import ContentSection from "components/Content/ContentSection";
 import { RESUME_EXPERIENCE_TEMPLATE, RESUME_TEMPLATE_LEFT } from "constants/resume";
 import ResumeSection from "./ResumeSection";
 import './resume.css';
 
-type T_Props = {}
-
-const Resume: React.FC<T_Props> = (props) => {
+const Resume: FC = () => {
   return (
     <ContentSection id='resume' title='Resume'>
         <div className='resume-wrapper'>

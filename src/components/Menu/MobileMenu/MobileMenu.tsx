@@ -1,18 +1,15 @@
-import { useCallback, useContext } from 'react';
+import { useContext } from 'react';
 import { IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { MobileMenuContext } from 'Providers/MobileMenu';
 import Sidebar from 'components/Sidebar/Sidebar';
 import './mobileMenu.css'
 
-type T_Props = {}
-
-const MobileMenu = (props: T_Props) => {
+const MobileMenu = () => {
 
     const [ mobileMenuOpened, setMobileMenuOpened ] = useContext(MobileMenuContext)
 
     const openMobileMenu = () => setMobileMenuOpened(true)
-    const closeMobileMenu = useCallback(() => setMobileMenuOpened(false), [])
 
     return (
         <div className='mobile-menu'>

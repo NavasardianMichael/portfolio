@@ -1,9 +1,7 @@
 import * as React from 'react';
 import './footer.css'
 
-type T_Props = {}
-
-export const Footer: React.FC<T_Props> = (props: T_Props) => {
+export const Footer: React.FC = () => {
   return (
     <div className='footer'>
       © Copyright 2022

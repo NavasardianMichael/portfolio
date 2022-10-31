@@ -2,9 +2,7 @@
 import { SOCIALS } from 'constants/socials';
 import './socials.css'
 
-type T_Props = {}
-
-export default function Socials (props: T_Props) {
+export default function Socials () {
   return (
     <div className='socials hoverable'>
         {

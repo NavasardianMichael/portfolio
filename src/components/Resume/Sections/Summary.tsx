@@ -1,6 +1,6 @@
-type T_Props = {}
+import { FC } from "react";
 
-const Summary: React.FC<T_Props> = (props) => {
+const Summary: FC = () => {
   return (
     <ul className='list'>
       <li>

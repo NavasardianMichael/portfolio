@@ -1,11 +1,9 @@
 import { GRADES } from 'constants/about';
 import { HTML_SYMBOLS } from 'constants/symbols';
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import './home.css'
 
-type T_Props = {}
-
-const Home: React.FC<T_Props> = (props) => {
+const Home: FC = () => {
 
     const [currentTextIndex, setCurrentTextIndex] = useState(0)
     const [currentTextPosition, setCurrentTextPosition] = useState(0)
