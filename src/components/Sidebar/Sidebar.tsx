@@ -6,17 +6,16 @@ import Socials from 'components/Socials/Socials'
 import './sidebar.css'
 
 type T_Props = {
-  closePortal?: () => void
   className?: string
 }
 
-export default function Sidebar ({ className, closePortal }: T_Props) {
+export default function Sidebar ({ className }: T_Props) {
   return (
-    <div className={`sidebar ${className}`}>
+    <div className={`sidebar ${className ?? ''}`}>
       <Panel />
       <Avatar />
       <Socials />
-      <Navbar closePortal={closePortal} />
+      <Navbar />
       <Footer />
     </div>
   )

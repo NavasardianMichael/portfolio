@@ -25,7 +25,7 @@ export const THEMES: {
         secondary: '#040b14',
         tertiary: '#ffff',
         quaternary: '#173b6c',
-        text: '#040b14',
+        text: '#2c2f3f',
         contrast: '#149ddd',
         contrastDark: '#173b6c'
     },

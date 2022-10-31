@@ -1,3 +1,4 @@
+import { MobileMenuProvider } from 'Providers/MobileMenu';
 import { AppThemeProvider } from 'Providers/Theme';
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
   // <StrictMode>
     <AppThemeProvider>
-      <App />
+      <MobileMenuProvider>
+        <App />
+      </MobileMenuProvider>
     </AppThemeProvider>
   // </StrictMode>
 )

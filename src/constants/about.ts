@@ -1,5 +1,11 @@
 import { calcAge } from "helpers/utils";
 
+export const GRADES = [
+    'Front-End Engineer',
+    'PhD student',
+    'Hopeless Optimist',
+]
+
 export const ABOUT_ITEMS = [
     {
         key: 'birthday',
