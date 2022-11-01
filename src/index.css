@@ -7,27 +7,15 @@ body {
   box-sizing: border-box;
 }
 
-.app {
-  display: flex;
-}
-
 @media only screen and (max-width: 768px) {
   html {
     font-size: 14px;
-  }
-
-  .app {
-    flex-wrap: wrap;
   }
 }
 
 @media (orientation: landscape) and (hover: none){
   html {
     font-size: 14px;
-  }
-
-  .app {
-    flex-wrap: wrap;
   }
 }
 

@@ -5,6 +5,17 @@
   position: relative;
 }
 
+.sidebar.mobile {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.sidebar.desktop {
+  height: 100vh;
+}
+
 .sidebar.closed {
   opacity: 0;
   transform: translateY(100%);
@@ -14,5 +25,5 @@
 .sidebar.opened {
   opacity: 1;
   transform: translateY(0);
-  transition: .2s ease-in;
+  transition: .2s ease-out;
 }

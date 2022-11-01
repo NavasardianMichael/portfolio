@@ -1,9 +1,9 @@
 import Sidebar from 'components/Sidebar/Sidebar';
-import './desktopMenu.css'
+import styles from './desktopMenu.module.css'
 
 const DesktopMenu = () => {
     return (
-        <div className='desktop-menu'>
+        <div className={styles['desktop-menu']}>
             <Sidebar />
         </div>
     )

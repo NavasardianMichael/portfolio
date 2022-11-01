@@ -1,20 +1,19 @@
 import { useContext } from 'react'
-import { PaletteMode, useTheme } from "@mui/material";
+import { PaletteMode } from "@mui/material";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import { IconButton } from '@mui/material';
 import { ThemeActionsContext } from 'Providers/Theme';
 import CloseIcon from '@mui/icons-material/Close';
 import { MobileMenuContext } from 'Providers/MobileMenu';
-import './panel.css'
+import { useThemeMode } from 'hooks/useThemeMode';
+import styles from './panel.module.css'
+import mobileMenuStyles from 'components/Menu/MobileMenu/mobileMenu.module.css'
 
-type T_Props = {}
+const Panel = () => {
 
-const Panel: React.FC<T_Props> = () => {
-
-    const themeContext = useTheme()
+    const isLightMode = useThemeMode() === 'light'
     const setTheme = useContext(ThemeActionsContext)
-    const isLightMode = themeContext.palette.mode === 'light'
 
     const [ mobileMenuOpened, setMobileMenuOpened ] = useContext(MobileMenuContext)
 
@@ -23,7 +22,7 @@ const Panel: React.FC<T_Props> = () => {
     }
 
     return (
-        <div className='panel'>
+        <div className={styles.panel}>
             {
                 isLightMode ?
                 <IconButton name='dark' onClick={handleClick}>
@@ -35,7 +34,7 @@ const Panel: React.FC<T_Props> = () => {
             }
             {
                 mobileMenuOpened &&
-                <IconButton onClick={() => setMobileMenuOpened(false)} className='mobile-menu-btn mobile-menu-close-btn'>
+                <IconButton onClick={() => setMobileMenuOpened(false)} className={`${mobileMenuStyles['mobile-menu-btn']} ${mobileMenuStyles['mobile-menu-close-btn']}`}>
                     <CloseIcon color={isLightMode ? 'secondary' : 'primary'} />
                 </IconButton>
             }

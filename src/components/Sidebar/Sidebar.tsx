@@ -3,7 +3,7 @@ import { Footer } from 'components/Footer/Footer'
 import Navbar from 'components/Navbar/Navbar'
 import Panel from 'components/Panel/Panel'
 import Socials from 'components/Socials/Socials'
-import './sidebar.css'
+import styles from './sidebar.module.css'
 
 type T_Props = {
   className?: string
@@ -11,7 +11,7 @@ type T_Props = {
 
 export default function Sidebar ({ className }: T_Props) {
   return (
-    <div className={`sidebar ${className ?? ''}`}>
+    <div className={`${styles.sidebar} ${className ? `${styles.mobile} ${className}` : styles.desktop}`}>
       <Panel />
       <Avatar />
       <Socials />

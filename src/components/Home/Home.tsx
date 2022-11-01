@@ -1,7 +1,7 @@
 import { GRADES } from 'constants/about';
 import { HTML_SYMBOLS } from 'constants/symbols';
 import { FC, useEffect, useState } from 'react';
-import './home.css'
+import styles from './home.module.css'
 
 const Home: FC = () => {
 
@@ -22,7 +22,7 @@ const Home: FC = () => {
                 setBlinkingClassName('')
                 setIncrementingStatus(prev => !prev)
             }, 2000)
-            return setBlinkingClassName('blinking')
+            return setBlinkingClassName(styles.blinking)
         }
 
         const positionTm = setTimeout(() => {
@@ -36,11 +36,11 @@ const Home: FC = () => {
     }, [currentTextPosition, isIncrementing])
 
     return (
-        <div id='home' className='home'>
-            <h1 className='home-full-name'>Michael Navasardyan</h1>
-            <h2 className='profession-wrapper'>
+        <div id='home' className={styles.home}>
+            <h1 className={styles['home-full-name']}>Michael Navasardyan</h1>
+            <h2 className={styles['profession-wrapper']}>
                 I'm{HTML_SYMBOLS.space}
-                <span className='profession'>{GRADES[currentTextIndex].slice(0, currentTextPosition)}</span>
+                <span className={styles['profession']}>{GRADES[currentTextIndex].slice(0, currentTextPosition)}</span>
                 <span className={blinkingClassName}>|</span>
             </h2>
         </div>

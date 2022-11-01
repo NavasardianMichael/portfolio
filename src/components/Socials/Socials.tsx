@@ -1,10 +1,11 @@
 
 import { SOCIALS } from 'constants/socials';
-import './socials.css'
+import commonStyles from 'assets/styles/commons.module.css';
+import styles from './socials.module.css'
 
 export default function Socials () {
   return (
-    <div className='socials hoverable'>
+    <div className={`${styles['socials']} ${commonStyles['hoverable']}`}>
         {
           SOCIALS.map(social => {
             const Icon = social.icon

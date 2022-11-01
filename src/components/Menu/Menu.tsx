@@ -1,14 +1,14 @@
 import DesktopMenu from './DesktopMenu/DesktopMenu';
-import './menu.css'
 import MobileMenu from './MobileMenu/MobileMenu';
+import styles from './menu.module.css';
 
 const Menu = () => {
   return (
-    <div className='menu'>
+    <div className={styles.menu}>
       <MobileMenu />
       <DesktopMenu />
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
