@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
-import commonStyles from 'assets/styles/commons.module.css';
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/material';
+import commonStyles from 'assets/styles/commons.module.css';
 import ContentSection from 'components/Content/ContentSection';
 import { CONTRIBUTIONS } from 'constants/contributions';
 
@@ -13,7 +13,7 @@ export default function Contributions({}: Props) {
 
   return (
     <ContentSection id="contributions" title="Contributions">
-      <div className={commonStyles["cards-wrapper"]}>
+      <div className={commonStyles['cards-wrapper']}>
         {CONTRIBUTIONS.map(({ id, name, desc, img, link }) => {
           return (
             <Card key={id} className={commonStyles.card}>

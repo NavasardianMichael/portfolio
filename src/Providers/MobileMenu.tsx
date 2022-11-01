@@ -1,8 +1,8 @@
 import { createContext, FC, useState } from "react";
 
 export const MobileMenuContext = createContext<[boolean, React.Dispatch<React.SetStateAction<boolean>>]>([
-    false,
-    () => null
+  false,
+  () => null
 ])
 
 type T_Props = {
@@ -12,7 +12,7 @@ type T_Props = {
 export const MobileMenuProvider: FC<T_Props> = ({children}) => {
   return (
     <MobileMenuContext.Provider value={useState(false)}>
-        {children}
+      {children}
     </MobileMenuContext.Provider>
   )
 }
