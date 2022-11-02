@@ -9,12 +9,13 @@ import { SKILLS } from 'constants/skills';
 import { THEMES } from 'constants/theme';
 import { useThemeMode } from 'hooks/useThemeMode';
 import styles from './skills.module.css';
+import { E_TRANSLATIONS } from 'constants/locale';
 
 const Skills: FC = () => {
   const mode = useThemeMode();
 
   return (
-    <ContentSection id="skills" title="Skills">
+    <ContentSection id={E_TRANSLATIONS.skills}>
       <List className={styles['skills-list']}>
         {SKILLS.map((skill) => {
           return (

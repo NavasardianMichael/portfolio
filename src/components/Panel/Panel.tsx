@@ -9,13 +9,15 @@ import { MobileMenuContext } from 'Providers/MobileMenu';
 import { ThemeActionsContext } from 'Providers/Theme';
 import mobileMenuStyles from 'components/Menu/MobileMenu/mobileMenu.module.css';
 import { useThemeMode } from 'hooks/useThemeMode';
-import styles from './panel.module.css';
 import { useTranslations } from 'hooks/useTranslations';
+import styles from './panel.module.css';
+import { LocaleContext } from 'Providers/Locale';
 
 const Panel = () => {
   const isLightMode = useThemeMode() === 'light';
   const setTheme = useContext(ThemeActionsContext);
-  const { lightMode, darkMode } = useTranslations(['lightMode', 'darkMode'])
+  const { toggleLocale } = useContext(LocaleContext)
+  const { lightMode, darkMode, toggleLanguage } = useTranslations();
 
   const [mobileMenuOpened, setMobileMenuOpened] = useContext(MobileMenuContext);
 
@@ -42,10 +44,7 @@ const Panel = () => {
           <CloseIcon color={isLightMode ? 'secondary' : 'primary'} />
         </IconButton>
       )}
-      <IconButton
-      // onClick={() => setMobileMenuOpened(false)}
-      // className={`${mobileMenuStyles['mobile-menu-btn']} ${mobileMenuStyles['mobile-menu-close-btn']}`}
-      >
+      <IconButton title={toggleLanguage} onClick={toggleLocale}>
         <PublicIcon color={isLightMode ? 'secondary' : 'primary'} />
       </IconButton>
     </div>

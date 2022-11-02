@@ -6,12 +6,13 @@ import { ABOUT_ITEMS } from 'constants/about';
 import { THEMES } from 'constants/theme';
 import { useThemeMode } from 'hooks/useThemeMode';
 import styles from './about.module.css';
+import { E_TRANSLATIONS } from 'constants/locale';
 
 const About: FC = () => {
   const mode = useThemeMode();
 
   return (
-    <ContentSection id="about" title="About">
+    <ContentSection id={E_TRANSLATIONS.about}>
       <p className="bio">
         I am an experienced software front-end engineer with a passion for designing and implementing innovative
         programs that promote the efficiency and effectiveness of society. Well-versed in modern technology and writing

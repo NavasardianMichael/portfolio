@@ -3,6 +3,7 @@ import { Card, CardActionArea, CardContent, Typography } from '@mui/material';
 import commonStyles from 'assets/styles/commons.module.css';
 import ContentSection from 'components/Content/ContentSection';
 import { PUBLICATIONS } from 'constants/publications';
+import { E_TRANSLATIONS } from 'constants/locale';
 
 const Publications: FC = () => {
   const handleClick = useCallback((link: string) => {
@@ -10,7 +11,7 @@ const Publications: FC = () => {
   }, []);
 
   return (
-    <ContentSection id="publications" title="Publications">
+    <ContentSection id={E_TRANSLATIONS.publications}>
       <div className={commonStyles["cards-wrapper"]}>
         {PUBLICATIONS.map((pub) => {
           return (

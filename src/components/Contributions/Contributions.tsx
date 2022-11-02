@@ -3,6 +3,7 @@ import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/m
 import commonStyles from 'assets/styles/commons.module.css';
 import ContentSection from 'components/Content/ContentSection';
 import { CONTRIBUTIONS } from 'constants/contributions';
+import { E_TRANSLATIONS } from 'constants/locale';
 
 type Props = {};
 
@@ -12,7 +13,7 @@ export default function Contributions({}: Props) {
   }, []);
 
   return (
-    <ContentSection id="contributions" title="Contributions">
+    <ContentSection id={E_TRANSLATIONS.contributions}>
       <div className={commonStyles['cards-wrapper']}>
         {CONTRIBUTIONS.map(({ id, name, desc, img, link }) => {
           return (

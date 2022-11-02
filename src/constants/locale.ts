@@ -80,7 +80,7 @@ export const TRANSLATIONS: {
         lightMode: 'Light Mode',
         darkMode: 'Dark Mode',
         toggleLanguage: 'Toggle Language',
-        avatar: 'Avatart',
+        avatar: 'Avatar',
         fullName: 'Michael Navasardyan',
         facebook: 'Facebook',
         linkedin: 'Linkedin',
@@ -148,8 +148,8 @@ export const TRANSLATIONS: {
     [E_LOCALES.am]: {
         lightMode: 'Light Mode',
         darkMode: 'Dark Mode',
-        toggleLanguage: 'Toggle Language',
-        avatar: 'Avatart',
+        toggleLanguage: 'Փոխել լեզուն',
+        avatar: 'Avatar',
         fullName: 'Միքայել Նավասարդյան',
         facebook: 'Facebook',
         linkedin: 'Linkedin',
@@ -157,19 +157,19 @@ export const TRANSLATIONS: {
         mail: 'Mail',
         orcid: 'Orcid',
         call: 'Phone',
-        home: 'Home',
-        about: 'About',
-        skills: 'Skills',
-        resume: 'Resume',
-        publications: 'Publications',
-        contributions: 'Contributions',
+        home: 'Գլխավոր',
+        about: 'Ամփոփ',
+        skills: 'Հմտություններ',
+        resume: 'Ինքնակենսագրություն',
+        publications: 'Հրապարակումներ',
+        contributions: 'Աջակցություն',
         copyright: 'Copyright',
-        iam: "I'm",
-        frontEndEngineer: 'Front-End Engineer',
+        iam: "",
+        frontEndEngineer: 'Front-End Ծրագրավորող',
         hopelessOptimist: 'Hopeless Optimist',
         bio: `I am an experienced software front-end engineer with a passion for designing and implementing innovative
         programs that promote the efficiency and effectiveness of society. Well-versed in modern technology and writing
-        code to create systems that are scalable, reliable, and user-friendly. Supporter of servant leadership, have an
+        code to create systems that are scalable, reliab<Facle, and user-friendly. Supporter of servant leadership, have an
         ability to motivate and educate. Strategic thinker and innovative creator aimed at developing software that is
         customized to highlight organizational core competencies, and further their success. Ph.D. student with academic
         experience, who tries to make the world a better place.`,
@@ -177,7 +177,7 @@ export const TRANSLATIONS: {
         birthday: '24 Novermber 1997',
         ageKey: 'Age',
         academicDegreeKey: 'Academic Degree',
-        academicDegree: 'PhD student',
+        academicDegree: 'Ասպիրանտ',
         phoneKey: 'Phone',
         emailKey: 'Email',
         location: 'Location',

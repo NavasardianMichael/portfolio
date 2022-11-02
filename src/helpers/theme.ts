@@ -4,7 +4,7 @@ import { THEMES } from "constants/theme"
 export const getDesignTokens = (mode: PaletteMode) => {
     return createTheme({
         typography: {
-          fontFamily: 'Montserrat, serif'
+          fontFamily: 'Montserrat, sans-serif'
         },
         palette: {
           mode,
