@@ -41,7 +41,7 @@ const About: FC = () => {
                   <span className={styles['about-main-content-item-type']}>{item.key}:</span>
                   <span>{item.value}</span>
                 </div>
-              );
+              )
             })}
           </div>
         </div>

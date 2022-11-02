@@ -9,7 +9,7 @@ import styles from './content.module.css';
 
 const Content: FC = () => {
   return (
-    <div className={styles["content"]}>
+    <div className={styles.content}>
       <Home />
       <About />
       <Skills />
