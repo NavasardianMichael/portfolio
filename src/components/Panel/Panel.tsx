@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import PublicIcon from '@mui/icons-material/Public';
+// import PublicIcon from '@mui/icons-material/Public';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import { PaletteMode } from '@mui/material';
 import { IconButton } from '@mui/material';
@@ -42,12 +42,12 @@ const Panel = () => {
           <CloseIcon color={isLightMode ? 'secondary' : 'primary'} />
         </IconButton>
       )}
-      <IconButton
+      {/* <IconButton
       // onClick={() => setMobileMenuOpened(false)}
       // className={`${mobileMenuStyles['mobile-menu-btn']} ${mobileMenuStyles['mobile-menu-close-btn']}`}
       >
         <PublicIcon color={isLightMode ? 'secondary' : 'primary'} />
-      </IconButton>
+      </IconButton> */}
     </div>
   );
 };

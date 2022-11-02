@@ -5,18 +5,18 @@ import { AppThemeProvider } from 'Providers/Theme';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css'
-import { LocaleProvider } from 'Providers/Locale';
+// import { LocaleProvider } from 'Providers/Locale';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <StrictMode>
     <AppThemeProvider>
-      <LocaleProvider>
+      {/* <LocaleProvider> */}
         <MobileMenuProvider>
           <App />
         </MobileMenuProvider>
-      </LocaleProvider>
+      {/* </LocaleProvider> */}
     </AppThemeProvider>
   </StrictMode>,
 );
