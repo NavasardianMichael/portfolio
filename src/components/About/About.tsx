@@ -22,7 +22,7 @@ const About: FC = () => {
       </p>
       <div className={styles['about-main']}>
         <div className={styles['about-main-avatar']}>
-          <img src={avatar} />
+          <img src={avatar} alt='avatar' />
         </div>
         <div className={styles['about-main-content']}>
           <h3 className={styles['about-main-content-title']}>Front-End Engineer</h3>

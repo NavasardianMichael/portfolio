@@ -7,7 +7,7 @@ export default function Avatar() {
 
   return (
     <div className={`avatar-wrapper ${mode === 'light' ? 'shadow' : 'border'}`}>
-      <img src={avatar} />
+      <img src={avatar} alt='avatar' />
       <h3 className="full-name">Michael Navasardyan</h3>
     </div>
   );
