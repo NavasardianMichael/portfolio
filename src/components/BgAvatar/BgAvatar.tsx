@@ -5,7 +5,7 @@ import './bgAvatar.css'
 const BgAvatar: FC = () => {
   return (
     <div className='bgAvatar'>
-      <img src={avatar} data-testid='avatar-img' />
+      <img src={avatar} data-testid='avatar-img' alt='avatar' />
     </div>
   )
 }
