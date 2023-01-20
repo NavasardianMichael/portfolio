@@ -26,11 +26,11 @@ const Panel = () => {
   return (
     <div className={styles.panel}>
       {isLightMode ? (
-        <IconButton title={lightMode} name="dark" onClick={handleClick}>
+        <IconButton title={darkMode} name="dark" onClick={handleClick}>
           <DarkModeIcon color="secondary" />
         </IconButton>
       ) : (
-        <IconButton title={darkMode} name="light" onClick={handleClick} color="secondary">
+        <IconButton title={lightMode} name="light" onClick={handleClick} color="secondary">
           <WbSunnyIcon color="secondary" />
         </IconButton>
       )}

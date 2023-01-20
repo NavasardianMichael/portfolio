@@ -21,7 +21,6 @@
     flex-wrap: wrap;
     gap: var(--card-gap);
     margin-top: 26px;
-    margin-bottom: 72px;
 }
 
 .card {

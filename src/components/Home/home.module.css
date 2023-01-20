@@ -95,13 +95,13 @@
     animation: fadeInFromNone 700ms infinite;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
     .home {
         padding-left: 5%;
     }
 }
 
-@media (orientation: landscape) and (hover: none){
+@media only screen and (max-width: 768px){
     .home {
         padding-left: 5%;
     }

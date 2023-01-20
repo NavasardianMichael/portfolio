@@ -6,3 +6,9 @@
     width: 100%;
     text-align: center;
 }
+
+@media only screen and (max-width: 768px) and (orientation: landscape) and (hover: none) {
+    .footer {
+        display: none;
+    }   
+}

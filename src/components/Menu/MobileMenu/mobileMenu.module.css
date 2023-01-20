@@ -21,8 +21,14 @@
   }
 }
 
-@media (orientation: landscape) and (hover: none){
+@media only screen and (max-width: 768px) {
   .mobile-menu {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) and (hover: none) {
+  .mobile-menu {
+    font-size: 12px;
   }
 }

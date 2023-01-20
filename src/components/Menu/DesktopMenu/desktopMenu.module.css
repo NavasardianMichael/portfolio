@@ -1,12 +1,12 @@
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .desktop-menu {
     display: none;
   }
 }
 
-@media (orientation: landscape) and (hover: none){
+@media only screen and (max-width: 768px){
   .desktop-menu {
     display: none;
   }

@@ -5,6 +5,7 @@
 
 .skill {
     width: 20%;
+    pointer-events: none;
 }
 
 @media only screen and (max-width: 1276px) {
@@ -21,7 +22,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
     .skill {
         width: 50%;
         max-width: none;

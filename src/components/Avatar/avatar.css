@@ -19,7 +19,7 @@
 }
 
 .avatar-wrapper.shadow img {
-    box-shadow: #2c2f3f48 0px 0px 25px 8px;
+    box-shadow: #2c2f3f48 0px 0px 36px 5px;
 }
 
 .avatar-wrapper .full-name {
@@ -33,7 +33,7 @@
   }
 }
 
-@media (orientation: landscape) and (hover: none){
+@media only screen and (max-width: 768px) and (orientation: landscape) and (hover: none) {
     .avatar-wrapper img {
         display: none;
     }
