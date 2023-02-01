@@ -7,10 +7,15 @@ export default function Socials () {
   return (
     <div className={`${styles['socials']} ${commonStyles['hoverable']}`}>
         {
-          SOCIALS.map(social => {
-            const Icon = social.icon
+          SOCIALS.map(({ id, href, icon: Icon, download }) => {
             return (
-              <a key={social.id} href={social.href} target='_blank'>
+              <a 
+                key={id} 
+                href={href} 
+                title={id}
+                download={!!download} 
+                target='_blank'
+              >
                 <Icon color='secondary' />
               </a>
             )

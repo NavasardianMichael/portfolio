@@ -1,9 +1,10 @@
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
-import TelegramIcon from '@mui/icons-material/Telegram';
 import PhoneIcon from '@mui/icons-material/Phone';
 import OrcidIcon from 'components/Icons/OrcidIcon';
+import PdfIcon from '@mui/icons-material/PictureAsPdf';
+import cvPath from 'assets/files/CV_Michael_Navasardyan.pdf'
 
 export const SOCIALS = [
     {
@@ -15,11 +16,6 @@ export const SOCIALS = [
         id: 'linkedin',
         href: 'https://www.linkedin.com/in/michael-navasardyan/',
         icon: LinkedInIcon
-    },
-    {
-        id: 'telegram',
-        href: '#',
-        icon: TelegramIcon
     },
     {
         id: 'mail',
@@ -35,5 +31,11 @@ export const SOCIALS = [
         id: 'phone',
         href: 'tel:+37498751615',
         icon: PhoneIcon
+    },
+    {
+        id: 'cv',
+        download: true,
+        href: cvPath,
+        icon: PdfIcon
     },
 ]
