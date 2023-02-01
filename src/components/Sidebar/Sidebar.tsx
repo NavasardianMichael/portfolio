@@ -1,5 +1,4 @@
 import Avatar from 'components/Avatar/Avatar'
-import { Footer } from 'components/Footer/Footer'
 import Navbar from 'components/Navbar/Navbar'
 import Panel from 'components/Panel/Panel'
 import Socials from 'components/Socials/Socials'
@@ -16,7 +15,6 @@ export default function Sidebar ({ className }: T_Props) {
       <Avatar />
       <Socials />
       <Navbar />
-      <Footer />
     </div>
   )
 }
