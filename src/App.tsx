@@ -5,7 +5,7 @@ import styles from './app.module.css'
 
 function App() {
   return (
-    <div className={styles.app}>
+    <div className={styles.app} data-testid='app-wrapper'>
       <Menu />
       <Content />
       <BgAvatar />
