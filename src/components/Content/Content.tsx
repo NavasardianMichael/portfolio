@@ -6,6 +6,7 @@ import Publications from 'components/Publications/Publications';
 import Resume from 'components/Resume/Resume';
 import Skills from 'components/Skills/Skills';
 import styles from './content.module.css';
+import Contact from 'components/Contact/Contact';
 
 const Content: FC = () => {
   return (
@@ -16,6 +17,7 @@ const Content: FC = () => {
       <Resume />
       <Publications />
       <Contributions />
+      <Contact />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import SourceIcon from '@mui/icons-material/Source';
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 export const SECTIONS = [
     {
@@ -35,5 +36,10 @@ export const SECTIONS = [
         id: 'contributions',
         name: 'Contributions',
         icon: DashboardCustomizeIcon,
-    }
+    },
+    {
+        id: 'contact',
+        name: 'Contact',
+        icon: ConnectWithoutContactIcon,
+    },
 ]
