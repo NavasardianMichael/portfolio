@@ -10,6 +10,5 @@ export const calcAge: (d: string) => number = (dateString: string) => {
 }
 
 export const combineClassNames = (...classNames: string[]) => {
-  if(!classNames.length) return undefined;
   return classNames.filter(className => !!className).join(' ')
 }

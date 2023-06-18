@@ -4,8 +4,12 @@
     gap: 1rem;
 }
 
-.fields div {
-    width: calc(100% / 3 - 2rem);
+.fields .field:not(.textarea) {
+    width: calc(100% / 3 - 1rem);
+}
+
+.field.textarea {
+    width: 100%;
 }
 
 .fields textarea,
