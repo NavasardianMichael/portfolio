@@ -1,10 +1,9 @@
-import HomeIcon from '@mui/icons-material/Home';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
-import SourceIcon from '@mui/icons-material/Source';
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
-import PsychologyIcon from '@mui/icons-material/Psychology';
 import DashboardCustomizeIcon from '@mui/icons-material/DashboardCustomize';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import HomeIcon from '@mui/icons-material/Home';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import SourceIcon from '@mui/icons-material/Source';
 
 export const SECTIONS = [
     {
@@ -36,10 +35,5 @@ export const SECTIONS = [
         id: 'contributions',
         name: 'Contributions',
         icon: DashboardCustomizeIcon,
-    },
-    {
-        id: 'contact',
-        name: 'Contact',
-        icon: ConnectWithoutContactIcon,
     },
 ]

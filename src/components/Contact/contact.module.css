@@ -1,0 +1,14 @@
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.fields div {
+    width: calc(100% / 3 - 2rem);
+}
+
+.fields textarea,
+.fields input {
+    width: 100%;
+}

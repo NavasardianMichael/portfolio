@@ -1,12 +1,14 @@
 import { FC } from 'react';
+
 import About from 'components/About/About';
+import Contact from 'components/Contact/Contact';
 import Contributions from 'components/Contributions/Contributions';
 import Home from 'components/Home/Home';
 import Publications from 'components/Publications/Publications';
 import Resume from 'components/Resume/Resume';
 import Skills from 'components/Skills/Skills';
+
 import styles from './content.module.css';
-import Contact from 'components/Contact/Contact';
 
 const Content: FC = () => {
   return (
