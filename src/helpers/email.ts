@@ -1,35 +1,15 @@
-import { FIELDS } from "constants/emails";
-
-const nodemailer = require('nodemailer');
-
-export type T_MailOptions = {
-  [key in (typeof FIELDS[number])['id']]: string
+type T_Args = {
+  subject: string, 
+  body: string
 }
 
-export const sendEmail = async (options: T_MailOptions) => {
-    const testAccount = await nodemailer.createTestAccount();
-    
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: testAccount.user,
-          pass: testAccount.pass
-        }
-      });
-      
-      const mailOptions = {
-        from: options.mail,
-        to: 'navasardianimchael@gmail.com',
-        subject: options.subject,
-        text: options.message
-      };
-      
-      transporter.sendMail(mailOptions, function(error: any, info: any){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-      });
-      
+export const sendEmail = async ({subject, body}: T_Args) => {
+  const response = await Email.send({
+    SecureToken : '69a8b1cb-96b2-4f95-969d-8b4f2bef28fb',
+    From : 'navasardianmichael2@gmail.com' as string,
+    To : 'navasardianmichael@gmail.com',
+    Subject : subject,
+    Body : body
+  })
+  return response 
 }

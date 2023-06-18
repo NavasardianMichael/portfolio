@@ -4,15 +4,73 @@
     gap: 1rem;
 }
 
-.fields .field:not(.textarea) {
-    width: calc(100% / 3 - 1rem);
+.field.error input,
+.field.error textarea {
+    border: 1px solid red;
 }
 
-.field.textarea {
+.field.error label,
+.field.error {
+    color: red;
+}
+
+.field input,
+.field textarea {
+    padding: .75rem 1rem;
+    margin-top: .5rem;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    font-family: 'Montserrat', serif;
+}
+
+.field input:focus-within,
+.field textarea:focus-within {
+    outline: none;
+    border: 1px solid #39CCCC;
+}
+
+.fields .field:not(.textarea) {
+    width: calc(100% / 3 - .67rem);
+}
+
+.fields .field.textarea {
     width: 100%;
 }
 
 .fields textarea,
 .fields input {
     width: 100%;
+}
+
+.form button {
+    all: unset;
+    display: block;
+    margin: 1rem auto 0 auto;
+    background-color: #39CCCC;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.form button:hover {
+    background-color: #39ccccd8;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 1368px) {
+    .field:not(.textarea):not(.subject) {
+        width: calc(100% / 2 - .5rem);
+    }
+
+    .fields .field.subject {
+        width: 100%;
+    }
+}
+  
+@media only screen and (max-width: 768px) {
+    .fields .field {
+        width: 100% !important;
+    }
 }

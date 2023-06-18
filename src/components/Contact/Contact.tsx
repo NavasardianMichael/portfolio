@@ -59,31 +59,55 @@ export default function Contact({}: Props) {
     subject: ''
   })
 
+  const [ errors, setErrors ] = useState<{ [key in keyof typeof CONTACT_FORM_FIELD_NAMES]: boolean }>({
+    name: false,
+    email: false,
+    message: false,
+    subject: false
+  })
+
   const handleChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (e) => {
-    const { value, name } = e.currentTarget;
+    const { value } = e.currentTarget;
+    const name = e.currentTarget.name as typeof CONTACT_FORM_FIELD_NAMES[keyof typeof CONTACT_FORM_FIELD_NAMES];
+
+    if(errors[name]) setErrors(prev => ({...prev, [name]: false}));
+
     setValues(prev => ({
       ...prev,
       [name]: value
     }))
   }
 
+  const handleSubmit:  React.FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    
+    const currentErrors = Object.values(CONTACT_FORM_FIELD_NAMES).map(fieldName => {
+      if(values[fieldName]) return false;
+      setErrors(prev => ({...prev, [fieldName]: true}))
+      return true 
+    })
+    if(currentErrors.includes(true)) return;
+
+    console.log('SUBMITTED')
+  }
+
   return (
     <ContentSection id="contact" title="Contact">
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.fields}>
           {
             CONTACT_FORM_TEMPLATE.map(({ id, isTextArea, label, className, placeholder }) => {
               return (
-                <div key={id} className={className}>
-                  <label>{label}</label>
+                <div key={id} className={combineClassNames(errors[id] ? styles.error : undefined, className) }>
+                  <label>{label} *</label>
                   {
                     isTextArea ?
                     <textarea
+                      rows={6}
                       name={id}
                       placeholder={placeholder}
                       value={values[id]}
                       onChange={handleChange}
-                      rows={6}
                     /> :
                     <input
                       name={id}
@@ -97,7 +121,9 @@ export default function Contact({}: Props) {
             })
           }
         </div>
-        <button type='submit' value='Send Message' />
+        <button type='submit'>
+          Send Message
+        </button>
       </form>
     </ContentSection>
   );

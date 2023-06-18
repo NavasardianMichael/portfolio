@@ -9,6 +9,6 @@ export const calcAge: (d: string) => number = (dateString: string) => {
   return ~~((Date.now() - birthday) / (31557600000));
 }
 
-export const combineClassNames = (...classNames: string[]) => {
+export const combineClassNames = (...classNames: (string | undefined)[]) => {
   return classNames.filter(className => !!className).join(' ')
 }
