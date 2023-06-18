@@ -1,54 +1,14 @@
 import ContentSection from 'components/Content/ContentSection';
 
+import ReactDOMServer from 'react-dom/server';
 import styles from './contact.module.css';
 import { combineClassNames } from 'helpers/utils';
 import { useState } from 'react';
+import { sendEmail } from 'helpers/email';
+import { CONTACT_FORM_FIELD_NAMES, CONTACT_FORM_TEMPLATE } from './constants';
+import { EmailTemplate } from './EmailTemplate';
 
 type Props = {};
-
-const CONTACT_FORM_FIELD_NAMES = {
-  name: 'name',
-  email: 'email',
-  subject: 'subject',
-  message: 'message',
-} as const
-
-const CONTACT_FORM_TEMPLATE: {
-  id: typeof CONTACT_FORM_FIELD_NAMES[keyof typeof CONTACT_FORM_FIELD_NAMES],
-  isTextArea: boolean,
-  label: string,
-  className: string,
-  placeholder: string,
-}[] = [
-  {
-    id: CONTACT_FORM_FIELD_NAMES.name,
-    isTextArea: false,
-    label: 'Your Name',
-    className: combineClassNames(styles.field, styles.name),
-    placeholder: 'Enter Your Name'
-  },
-  {
-    id: CONTACT_FORM_FIELD_NAMES.email,
-    isTextArea: false,
-    label: 'Your Email',
-    className: combineClassNames(styles.field, styles.email),
-    placeholder: 'Enter Your Email'
-  },
-  {
-    id: CONTACT_FORM_FIELD_NAMES.subject,
-    isTextArea: false,
-    label: 'Subject',
-    className: combineClassNames(styles.field, styles.subject),
-    placeholder: 'Enter Email Subject'
-  },
-  {
-    id: CONTACT_FORM_FIELD_NAMES.message,
-    isTextArea: true,
-    label: 'Message',
-    className: combineClassNames(styles.field, styles.textarea, styles.message),
-    placeholder: 'Enter Email Message'
-  },
-]
 
 export default function Contact({}: Props) {
 
@@ -56,14 +16,12 @@ export default function Contact({}: Props) {
     name: '',
     email: '',
     message: '',
-    subject: ''
   })
 
   const [ errors, setErrors ] = useState<{ [key in keyof typeof CONTACT_FORM_FIELD_NAMES]: boolean }>({
     name: false,
     email: false,
     message: false,
-    subject: false
   })
 
   const handleChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (e) => {
@@ -88,7 +46,17 @@ export default function Contact({}: Props) {
     })
     if(currentErrors.includes(true)) return;
 
-    console.log('SUBMITTED')
+    const body = ReactDOMServer.renderToStaticMarkup(
+      <EmailTemplate values={values} />
+    )
+    
+    sendEmail(body)
+
+    setValues({
+      name: '',
+      email: '',
+      message: '',
+    })
   }
 
   return (
