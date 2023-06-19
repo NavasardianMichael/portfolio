@@ -1,9 +1,7 @@
 import styles from './contact.module.css';
 import CheckIcon from '@mui/icons-material/Check';
 
-type Props = {};
-
-export default function SuccessDialog({}: Props) {
+export default function SuccessDialog() {
   return (
     <div className={styles.successDialog}>
         <CheckIcon fontSize='large' />

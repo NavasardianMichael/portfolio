@@ -4,9 +4,7 @@ import commonStyles from 'assets/styles/commons.module.css';
 import ContentSection from 'components/Content/ContentSection';
 import { CONTRIBUTIONS } from 'constants/contributions';
 
-type Props = {};
-
-export default function Contributions({}: Props) {
+export default function Contributions() {
   const handleClick = useCallback((link: string) => {
     window.open(link, '_blank');
   }, []);

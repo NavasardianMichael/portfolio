@@ -10,9 +10,7 @@ import { EmailTemplate } from './EmailTemplate';
 import Loader from 'components/Loader/Loader';
 import SuccessDialog from './SuccessDialog';
 
-type Props = {};
-
-export default function Contact({}: Props) {
+export default function Contact() {
 
   const [ values, setValues ] = useState<{ [key in keyof typeof CONTACT_FORM_FIELD_NAMES]: string }>({
     name: '',

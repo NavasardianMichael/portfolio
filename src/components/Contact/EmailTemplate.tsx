@@ -7,7 +7,7 @@ type T_Props = {
 
 const style: React.CSSProperties = {
     width: '100%',
-    maxWidth: '600px',
+    maxWidth: '400px',
     display: 'block',
     margin: 'auto'
 }
@@ -15,8 +15,8 @@ const style: React.CSSProperties = {
 export const EmailTemplate: FC<T_Props> = ({values}) => {
     return (
         <div>
-            <h1 style={{textAlign: 'center'}}>Email from Portfolio visitor</h1>
-            <img src='https://www.pngplay.com/wp-content/uploads/13/Email-Marketing-PNG-Images-HD.png' style={style} />
+            <h1 style={{textAlign: 'center'}}>Email from Portfolio Visitor</h1>
+            <img src='https://www.pngplay.com/wp-content/uploads/13/Email-Marketing-PNG-Images-HD.png' style={style} alt='contact-illustration' />
             {
                 Object.values(CONTACT_FORM_FIELD_NAMES).map(fieldName => {
                     return (

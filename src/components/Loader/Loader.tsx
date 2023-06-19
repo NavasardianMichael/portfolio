@@ -1,9 +1,7 @@
 import CircularProgress from '@mui/material/CircularProgress';
 import styles from './loader.module.css';
 
-type Props = {};
-
-export default function Loader({}: Props) {
+export default function Loader() {
   return (
     <div className={styles.loader}>
         <CircularProgress sx={{color: '#39CCCC'}} size={100} />
