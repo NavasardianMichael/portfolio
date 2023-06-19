@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { sendEmail } from 'helpers/email';
 import { CONTACT_FORM_FIELD_NAMES, CONTACT_FORM_TEMPLATE } from './constants';
 import { EmailTemplate } from './EmailTemplate';
+import Loader from 'components/Loader/Loader';
+import SuccessDialog from './SuccessDialog';
 
 type Props = {};
 
@@ -24,6 +26,9 @@ export default function Contact({}: Props) {
     message: false,
   })
 
+  const [ isLoading, setIsLoading ] = useState(false)
+  const [ showSuccessDialog, setShowSuccessDialog ] = useState(false)
+  
   const handleChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (e) => {
     const { value } = e.currentTarget;
     const name = e.currentTarget.name as typeof CONTACT_FORM_FIELD_NAMES[keyof typeof CONTACT_FORM_FIELD_NAMES];
@@ -46,53 +51,69 @@ export default function Contact({}: Props) {
     })
     if(currentErrors.includes(true)) return;
 
-    const body = ReactDOMServer.renderToStaticMarkup(
-      <EmailTemplate values={values} />
-    )
-    
-    sendEmail(body)
+    const sendAsyncEmail = async () => {
+      setIsLoading(true);
 
-    setValues({
-      name: '',
-      email: '',
-      message: '',
-    })
+      const body = ReactDOMServer.renderToStaticMarkup(
+        <EmailTemplate values={values} />
+      )
+      
+      await sendEmail(body)
+  
+      setValues({
+        name: '',
+        email: '',
+        message: '',
+      })
+  
+      setIsLoading(false);
+      setShowSuccessDialog(true);
+    }
+
+    sendAsyncEmail()
   }
 
   return (
-    <ContentSection id="contact" title="Contact">
-      <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.fields}>
-          {
-            CONTACT_FORM_TEMPLATE.map(({ id, isTextArea, label, className, placeholder }) => {
-              return (
-                <div key={id} className={combineClassNames(errors[id] ? styles.error : undefined, className) }>
-                  <label>{label} *</label>
-                  {
-                    isTextArea ?
-                    <textarea
-                      rows={6}
-                      name={id}
-                      placeholder={placeholder}
-                      value={values[id]}
-                      onChange={handleChange}
-                    /> :
-                    <input
-                      name={id}
-                      placeholder={placeholder}
-                      value={values[id]}
-                      onChange={handleChange}
-                    />
-                  }
-                </div>
-              )
-            })
-          }
-        </div>
-        <button type='submit'>
-          Send Message
-        </button>
-      </form>
-    </ContentSection>
+    <>
+      {isLoading && <Loader />}
+      <ContentSection id="contact" title="Contact Me">
+        {
+          showSuccessDialog ?
+          <SuccessDialog /> :
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.fields}>
+              {
+                CONTACT_FORM_TEMPLATE.map(({ id, isTextArea, label, className, placeholder }) => {
+                  return (
+                    <div key={id} className={combineClassNames(errors[id] ? styles.error : undefined, className) }>
+                      <label>{label} *</label>
+                      {
+                        isTextArea ?
+                        <textarea
+                          rows={6}
+                          name={id}
+                          placeholder={placeholder}
+                          value={values[id]}
+                          onChange={handleChange}
+                        /> :
+                        <input
+                          name={id}
+                          placeholder={placeholder}
+                          value={values[id]}
+                          onChange={handleChange}
+                        />
+                      }
+                    </div>
+                  )
+                })
+              }
+            </div>
+            <button type='submit'>
+              Send Message
+            </button>
+          </form>
+        }
+      </ContentSection>
+    </>
   );
 }
