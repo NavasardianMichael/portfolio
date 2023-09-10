@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.41bae590.css",
-    "main.js": "/portfolio/static/js/main.ba945385.js",
+    "main.js": "/portfolio/static/js/main.4326360d.js",
     "static/media/main-avatar.jpeg": "/portfolio/static/media/main-avatar.a1141a11db58ccd23f15.jpeg",
-    "static/media/CV_Michael_Navasardyan.pdf": "/portfolio/static/media/CV_Michael_Navasardyan.fd5021771bc0d7fc1820.pdf",
     "static/media/npm.png": "/portfolio/static/media/npm.061e65dec1a5ceee089a.png",
     "index.html": "/portfolio/index.html",
     "main.41bae590.css.map": "/portfolio/static/css/main.41bae590.css.map",
-    "main.ba945385.js.map": "/portfolio/static/js/main.ba945385.js.map"
+    "main.4326360d.js.map": "/portfolio/static/js/main.4326360d.js.map"
   },
   "entrypoints": [
     "static/css/main.41bae590.css",
-    "static/js/main.ba945385.js"
+    "static/js/main.4326360d.js"
   ]
 }
