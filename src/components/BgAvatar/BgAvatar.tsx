@@ -1,5 +1,5 @@
-import avatar from 'assets/images/main-avatar.jpeg'
 import { FC } from 'react';
+import avatar from 'assets/images/main-avatar.jpeg'
 import './bgAvatar.css'
 
 const BgAvatar: FC = () => {

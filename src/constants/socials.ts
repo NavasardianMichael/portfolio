@@ -4,7 +4,6 @@ import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import OrcidIcon from 'components/Icons/OrcidIcon';
 import PdfIcon from '@mui/icons-material/PictureAsPdf';
-import cvPath from 'assets/files/CV_Michael_Navasardyan.pdf'
 
 export const SOCIALS = [
     {
@@ -35,7 +34,7 @@ export const SOCIALS = [
     {
         id: 'cv',
         download: true,
-        href: cvPath,
+        href: 'https://drive.google.com/uc?export=download&id=1qIZj6pyvWSbU5YgnJ6BpdV6FGJ4JRNr7',
         icon: PdfIcon
     },
 ]
