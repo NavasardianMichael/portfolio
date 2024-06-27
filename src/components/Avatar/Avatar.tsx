@@ -1,4 +1,4 @@
-import avatar from 'assets/images/main-avatar.jpeg';
+import avatar from 'assets/images/profile.jpg';
 import { useThemeMode } from 'hooks/useThemeMode';
 import './avatar.css';
 

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import avatar from 'assets/images/main-avatar.jpeg';
+import avatar from 'assets/images/profile.jpg';
 import ContentSection from 'components/Content/ContentSection';
 import { ABOUT_ITEMS } from 'constants/about';
 import { THEMES } from 'constants/theme';
