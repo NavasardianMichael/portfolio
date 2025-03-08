@@ -1,0 +1,25 @@
+.app {
+  display: flex;
+}
+
+@media only screen and (max-width: 769px) {
+  .app {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .app {
+    flex-wrap: wrap;
+  }
+}
+
+::-moz-selection {
+  color: #FFFF;
+  background: #39CCCC;
+}
+
+::selection {
+  color: #FFFF;
+  background: #39CCCC;
+}

@@ -1,0 +1,24 @@
+.navbar {
+    margin-top: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem;
+}
+
+.navbar a svg {
+    margin-right: 8px;
+}
+
+.navbar a:hover {
+    background-color: var(--tertiary);
+}
+
+@media only screen and (max-width: 768px) and (orientation: landscape) and (hover: none) {
+    .navbar {
+        margin-top: 0;
+    }   
+}

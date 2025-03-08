@@ -1,0 +1,8 @@
+.panel {
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
+}
+
+.panel button svg {
+    color: var(--text) !important;
+}

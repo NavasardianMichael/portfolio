@@ -15,6 +15,7 @@ const initialState: ResumeSlice = {
   publications: [],
   contributions: [],
   socials: [],
+  sectionNames: []
 }
 
 export const { reducer: resumeReducer, actions } = createSlice({

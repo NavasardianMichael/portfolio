@@ -10,3 +10,9 @@ declare module '*.png' {
   const content: FunctionComponent<SVGAttributes<SVGElement>>
   export default content
 }
+
+declare module '*.pdf' {
+  import { FunctionComponent, SVGAttributes } from 'react'
+  const content: FunctionComponent<SVGAttributes<SVGElement>>
+  export default content
+}

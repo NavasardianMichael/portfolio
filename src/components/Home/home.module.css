@@ -1,0 +1,102 @@
+.home {
+    height: 100vh;
+    display: flex;
+    padding-left: 15%;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffff;
+}
+
+.home-full-name {
+    width: 100%;
+}
+
+.profession-wrapper {
+    margin-top: 0;
+}
+
+.profession {
+    border-bottom: 4px solid var(--contrast);
+    padding-bottom: 4px;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinking {
+    -webkit-animation: fadeInFromNone 700ms infinite;
+    -moz-animation: fadeInFromNone 700ms infinite;
+    -o-animation: fadeInFromNone 700ms infinite;
+    animation: fadeInFromNone 700ms infinite;
+}
+
+@media only screen and (max-width: 769px) {
+    .home {
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .home {
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 769px) and (hover: none) {
+    .home-full-name {
+        margin-top: -100px;
+    }
+}

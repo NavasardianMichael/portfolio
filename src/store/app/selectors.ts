@@ -1,9 +1,10 @@
+import { UI_MODES } from 'helpers/constants/uiMode'
 import { RootState } from 'store/main'
 
-export const selectProfileData = (state: RootState) => state.profile.data
+export const selectUIMode = (state: RootState) => state.app.uiMode
 
-export const selectIsLoggedIn = (state: RootState) => state.profile.isLoggedIn
+export const selectIsLightMode = (state: RootState) => state.app.uiMode === UI_MODES.light
 
-export const selectIsProfileSlicePending = (state: RootState) => state.profile.isPending
+export const selectIsPending = (state: RootState) => state.app.isPending
 
-export const selectErrorMessage = (state: RootState) => state.profile.errorMessage
+export const selectIsMobileMenuOpened = (state: RootState) => state.app.isMobileMenuOpened

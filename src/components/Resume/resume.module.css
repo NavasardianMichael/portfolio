@@ -1,0 +1,14 @@
+.resume-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.resume-wrapper > div {
+  width: 50%;
+}
+
+@media only screen and (max-width: 1276px) {
+  .resume-wrapper > div {
+    width: 100%;
+  }
+}

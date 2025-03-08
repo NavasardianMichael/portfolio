@@ -1,0 +1,62 @@
+:root {
+    --card-gap: 20px
+}
+
+.hoverable {
+    user-select: none;
+}
+
+.hoverable a,
+.hoverable a svg  {
+    color: var(--text);
+    transition: .2s;
+}
+
+.contrast-dark-title {
+    color: var(--contrastDark);
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--card-gap);
+    margin-top: 26px;
+}
+
+.card {
+    width: calc((100% / 5) - ((4 * var(--card-gap)) / 5));
+    background-color: #ffff !important;
+    color: #040b14 !important;
+}
+
+@media only screen and (max-width: 1540px) {
+    .card {
+        width: calc((100% / 4) - ((3 * var(--card-gap)) / 4));
+    }
+}
+
+@media only screen and (max-width: 1276px) {
+    .card {
+        width: calc((100% / 3) - ((2 * var(--card-gap)) / 3));
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .card  {
+        width: calc((100% / 2) - ((1 * var(--card-gap)) / 2));
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card  {
+        width: 100%;
+    }
+}
+
+@media (hover: hover) {
+    .hoverable a:hover,
+    .hoverable a:hover svg {
+        color: var(--contrast);
+        transition: .2s;
+    }
+}

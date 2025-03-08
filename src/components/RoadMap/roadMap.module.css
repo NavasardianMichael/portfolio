@@ -1,0 +1,56 @@
+.resume-section-item {
+  border-left: 2px solid var(--contrastDark);
+  padding-left: 20px;
+  position: relative;
+  margin-left: 8px;
+}
+
+.resume-section-content > .resume-section-item:not(:last-child) {
+  padding-bottom: 20px;
+}
+
+.resume-section-item::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #ffff;
+  border: 2px solid var(--contrastDark);
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  transform: translate(-50%);
+}
+
+.resume-secion-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.resume-section-item-title {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.resume-section-initial-info {
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.list {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.list > li:not(:nth-of-type(1)) {
+  margin-top: 10px;
+}
+
+.resume-section-item-activity-duration {
+  display: inline-block;
+  background-color: #e4edf9;
+  font-weight: 600;
+  padding: 6px 16px;
+  margin-top: 6px;
+}

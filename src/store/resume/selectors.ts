@@ -8,6 +8,8 @@ export const selectCharacteristics = (state: RootState) => state.resume.characte
 
 export const selectContributions = (state: RootState) => state.resume.contributions
 
+export const selectPublications = (state: RootState) => state.resume.publications
+
 export const selectEducation = (state: RootState) => state.resume.education
 
 export const selectExperience = (state: RootState) => state.resume.experience
@@ -15,3 +17,5 @@ export const selectExperience = (state: RootState) => state.resume.experience
 export const selectSocials = (state: RootState) => state.resume.socials
 
 export const selectSkills = (state: RootState) => state.resume.skills
+
+export const selectSectionNames = (state: RootState) => state.resume.sectionNames

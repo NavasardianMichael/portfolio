@@ -1,7 +1,13 @@
-import { string } from 'yup'
 
-export const generateRequiredStringSchema = (fieldName: string) => {
-  return string().required(`${fieldName} is required`)
+export function decodeHTMLEntities(text: string) {
+  const textArea = document.createElement('textarea');
+  textArea.innerHTML = text;
+  return textArea.value;
+}
+
+export const calcAge: (d: string) => number = (dateString: string) => {
+  const birthday = +new Date(dateString);
+  return ~~((Date.now() - birthday) / (31557600000));
 }
 
 export const sleep = (ms: number) => {

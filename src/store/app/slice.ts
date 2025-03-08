@@ -1,9 +1,11 @@
 import { PayloadAction, SerializedError, createSlice } from '@reduxjs/toolkit'
 import { isFulfilledAction, isPendingAction, isRejectedAction } from 'helpers/functions/store'
 import { AppActionPayloads, AppSlice } from './types'
+import { UI_MODES } from 'helpers/constants/uiMode'
 
 const initialState: AppSlice = {
-  isLightMode: true,
+  uiMode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? UI_MODES.dark : UI_MODES.light,
+  isMobileMenuOpened: false,
   isPending: false,
   errorMessage: ''
 }

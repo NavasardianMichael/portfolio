@@ -26,16 +26,15 @@ export type ResumeSlice = {
   }[]
   socials: {
     name: string
-    iconUrl: string
     assetUrl: string
   }[]
+  sectionNames: string[]
 }
 
 type Experience = {
   position: string
-  name: string
   from: string
-  to: string
+  to?: string
   company: string
   location: string
 }

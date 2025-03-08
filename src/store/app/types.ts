@@ -1,5 +1,8 @@
+import { UIMode } from "helpers/types/uiMode"
+
 export type AppSlice = {
-  isLightMode: boolean
+  uiMode: UIMode
+  isMobileMenuOpened: boolean
   isPending: boolean
   errorMessage: Error['message']
 }
