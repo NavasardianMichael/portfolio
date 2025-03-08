@@ -5,7 +5,7 @@ import { message } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { PUBLIC_PAGES } from '../../helpers/constants/pages'
 import { PROFILE_FORM_INITIAL_VALUES } from '../../helpers/constants/profile'
-import { completeProfileThunk } from '../../store/profile/thunk'
+import { completeProfileThunk } from '../../store/app/thunk'
 
 export const useCompleteProfile = () => {
   const dispatch = useAppDispatch()

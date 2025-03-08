@@ -1,5 +1,5 @@
 import { Action, AnyAction, createAsyncThunk } from '@reduxjs/toolkit'
-import { StateSliceName, ThunkConfig } from 'helpers/types/store'
+import { StateSliceName, ThunkConfig } from '../types/store'
 
 export const createAppAsyncThunk = createAsyncThunk.withTypes<ThunkConfig>()
 
