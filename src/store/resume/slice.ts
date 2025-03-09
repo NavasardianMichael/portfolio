@@ -1,22 +1,8 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { ResumeSlice, ResumeSliceActionPayloads } from './types'
+import { RESUME_INITIAL_STATE } from 'helpers/constants/resume'
 
-const initialState: ResumeSlice = {
-  fullName: '',
-  characteristics: [],
-  primaryImageUrl: '',
-  secondaryImageUrl: '',
-  bio: '',
-  specialization: '',
-  aboutItems: [],
-  skills: [],
-  education: [],
-  experience: [],
-  publications: [],
-  contributions: [],
-  socials: [],
-  sectionNames: []
-}
+const initialState: ResumeSlice = RESUME_INITIAL_STATE
 
 export const { reducer: resumeReducer, actions } = createSlice({
   name: 'resume',

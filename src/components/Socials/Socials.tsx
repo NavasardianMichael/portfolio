@@ -10,6 +10,7 @@ export default function Socials() {
     <div className={`${styles['socials']} ${commonStyles['hoverable']}`}>
       {socials.map(({ name, assetUrl }) => {
         const Icon = ICONS_BY_SOCIAL_NAME[name as keyof typeof ICONS_BY_SOCIAL_NAME]
+        if (!Icon) return null
         return (
           <a key={name} href={assetUrl} title={name} download={!!DOWNLOADABLE_SOCIALS.includes(name)} target="_blank">
             <Icon />

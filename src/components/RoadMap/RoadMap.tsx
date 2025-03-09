@@ -1,5 +1,4 @@
 import { ResumeSlice } from 'store/resume/types'
-import { useTranslations } from 'hooks/useTranslations'
 import styles from './roadMap.module.css'
 
 type Props = {
@@ -7,8 +6,7 @@ type Props = {
   list: ResumeSlice['experience']
 }
 
-const RoadMap: React.FC = ({ title, list }) => {
-  const { experienceToMissingPlaceHolder } = useTranslations(['experienceToMissingPlaceHolder'])
+const RoadMap: React.FC<Props> = ({ title, list }) => {
   return (
     <div className={styles['resume-section']}>
       <h3 className={styles['resume-secion-title']}>{title}</h3>
@@ -18,7 +16,7 @@ const RoadMap: React.FC = ({ title, list }) => {
             <div key={`${company}-${from}-${to}`} className={styles['resume-section-item']}>
               <h4 className={styles['resume-section-item-title']}>{position}</h4>
               <span className={styles['resume-section-item-activity-duration']}>
-                {`${from} - ${to ?? experienceToMissingPlaceHolder}`}
+                {`${from} - ${to}`}
               </span>
               <p className={styles['resume-section-initial-info']}>{company}</p>
               <p className={styles['resume-section-initial-info']}>{location}</p>

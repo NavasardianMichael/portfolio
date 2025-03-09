@@ -1,11 +1,11 @@
-import { FC, useEffect, useState } from 'react'
-import { selectCharacteristics } from 'store/resume/selectors'
-import { useAppSelector } from 'hooks/useAppSelector'
 import { HTML_SYMBOLS } from 'helpers/constants/symbols'
+import { useAppSelector } from 'hooks/useAppSelector'
+import { FC, useEffect, useState } from 'react'
+import { selectResume } from 'store/resume/selectors'
 import styles from './home.module.css'
 
 const Home: FC = () => {
-  const characteristics = useAppSelector(selectCharacteristics)
+  const {fullName, characteristics} = useAppSelector(selectResume)
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [currentTextPosition, setCurrentTextPosition] = useState(0)
@@ -15,7 +15,6 @@ const Home: FC = () => {
   const increasePosition = () => setCurrentTextPosition((prev) => prev + 1)
 
   const decreasePosition = () => setCurrentTextPosition((prev) => prev - 1)
-  console.log({ currentTextPosition, currentTextIndex })
 
   useEffect(() => {
       let directionTm: NodeJS.Timeout
@@ -44,7 +43,7 @@ const Home: FC = () => {
 
   return (
     <div id="home" className={styles.home}>
-      <h1 className={styles['home-full-name']}>Michael Navasardyan</h1>
+      <h1 className={styles['home-full-name']}>{fullName}</h1>
       <h2 className={styles['profession-wrapper']}>
         I'm{HTML_SYMBOLS.space}
         <span className={styles['profession']}>{characteristics?.[currentTextIndex]?.slice?.(0, currentTextPosition) ?? 'N/A'}</span>

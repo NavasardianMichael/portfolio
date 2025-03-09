@@ -7,14 +7,12 @@ import { selectIsLightMode, selectIsMobileMenuOpened } from 'store/app/selectors
 import { setAppOptions } from 'store/app/slice'
 import { useAppDispatch } from 'hooks/useAppDispatch'
 import { useAppSelector } from 'hooks/useAppSelector'
-import { useTranslations } from 'hooks/useTranslations'
 import mobileMenuStyles from 'components/Menu/MobileMenu/mobileMenu.module.css'
 import styles from './panel.module.css'
 
 const Panel = () => {
   const dispatch = useAppDispatch()
   const isLightMode = useAppSelector(selectIsLightMode)
-  const { lightMode, darkMode } = useTranslations(['lightMode', 'darkMode'])
 
   const isMobileMenuOpened = useAppSelector(selectIsMobileMenuOpened)
 
@@ -25,17 +23,17 @@ const Panel = () => {
   return (
     <div className={styles.panel}>
       {isLightMode ? (
-        <IconButton title={darkMode} name="dark" onClick={handleClick}>
+        <IconButton title='Dark Mode' name="dark" onClick={handleClick}>
           <DarkModeIcon color="secondary" />
         </IconButton>
       ) : (
-        <IconButton title={lightMode} name="light" onClick={handleClick} color="secondary">
+        <IconButton title='Light Mode' name="light" onClick={handleClick} color="secondary">
           <WbSunnyIcon color="secondary" />
         </IconButton>
       )}
       {isMobileMenuOpened && (
         <IconButton
-          onClick={() => dispatch(setAppOptions({isMobileMenuOpened: false}))}
+          onClick={() => dispatch(setAppOptions({ isMobileMenuOpened: false }))}
           className={`${mobileMenuStyles['mobile-menu-btn']} ${mobileMenuStyles['mobile-menu-close-btn']}`}
         >
           <CloseIcon color={isLightMode ? 'secondary' : 'primary'} />
