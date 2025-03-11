@@ -11,6 +11,7 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
+  base: '/portfolio/',
   build: {
     sourcemap: true,
   },
