@@ -17,5 +17,3 @@ export const selectExperience = (state: RootState) => state.resume.experience
 export const selectSocials = (state: RootState) => state.resume.socials
 
 export const selectSkills = (state: RootState) => state.resume.skills
-
-export const selectSectionNames = (state: RootState) => state.resume.sectionNames

@@ -4,7 +4,7 @@ import { AppActionPayloads, AppSlice } from './types'
 import { UI_MODES } from 'helpers/constants/uiMode'
 
 const initialState: AppSlice = {
-  uiMode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? UI_MODES.dark : UI_MODES.light,
+  uiMode: UI_MODES.dark,
   isMobileMenuOpened: false,
   isPending: false,
   errorMessage: ''

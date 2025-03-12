@@ -1,15 +1,12 @@
-import commonStyles from 'styles/commons.module.css';
-import { ICONS_BY_SECTION_NAME } from 'helpers/constants/sections';
+import { SECTIONS } from 'helpers/constants/sections';
 import { useAppDispatch } from 'hooks/useAppDispatch';
-import { useAppSelector } from 'hooks/useAppSelector';
 import { FC, useCallback } from 'react';
 import { setAppOptions } from 'store/app/slice';
-import { selectSectionNames } from 'store/resume/selectors';
+import commonStyles from 'styles/commons.module.css';
 import styles from './navbar.module.css';
 
 const Navbar: FC = () => {
   const dispatch = useAppDispatch()
-  const sectionNames = useAppSelector(selectSectionNames)
 
   const closeMobileMenu = useCallback(() => dispatch(setAppOptions({isMobileMenuOpened: false})), [dispatch]);
 
@@ -19,10 +16,9 @@ const Navbar: FC = () => {
 
   return (
     <div className={`${styles['navbar']} ${commonStyles['hoverable']}`}>
-      {sectionNames.map((name) => {
-        const Icon = ICONS_BY_SECTION_NAME[name as keyof typeof ICONS_BY_SECTION_NAME];
+      {SECTIONS.map(({ id, name, Icon }) => {
         return (
-          <a onClick={handleClick} key={name} href={`#${name}`}>
+          <a onClick={handleClick} key={id} href={`#${id}`}>
             <Icon /> {name}
           </a>
         );

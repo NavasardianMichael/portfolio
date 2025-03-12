@@ -15,7 +15,7 @@ export type ResumeSlice = {
   publications: {
     title: string
     journal: string
-    date: string
+    details: string
     url: string
   }[]
   contributions: {
@@ -28,7 +28,6 @@ export type ResumeSlice = {
     name: string
     assetUrl: string
   }[]
-  sectionNames: string[]
 }
 
 type Experience = {

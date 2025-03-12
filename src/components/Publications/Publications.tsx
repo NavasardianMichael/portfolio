@@ -11,7 +11,7 @@ const Publications: FC = () => {
   return (
     <ContentSection id="publications" title="Publications">
       <div className={commonStyles['cards-wrapper']}>
-        {publications.map(({ date, journal, title, url }) => {
+        {publications.map(({ details, journal, title, url }) => {
           return (
             <Card key={title} className={commonStyles.card}>
               <CardActionArea href={url} target="_blank">
@@ -19,7 +19,7 @@ const Publications: FC = () => {
                   <Typography gutterBottom fontWeight={600} variant="body1">
                     {title}
                   </Typography>
-                  <Typography variant="body2">{`"${journal}" · ${date}`}</Typography>
+                  <Typography variant="body2">{`"${journal}" · ${details}`}</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>

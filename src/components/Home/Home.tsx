@@ -39,7 +39,7 @@ const Home: FC = () => {
       clearTimeout(positionTm)
       clearTimeout(directionTm)
     }
-  }, [characteristics, currentTextIndex, currentTextPosition, isIncrementing])
+  }, [characteristics, currentTextPosition, isIncrementing])
 
   return (
     <div id="home" className={styles.home}>
