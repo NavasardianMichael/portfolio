@@ -40,5 +40,5 @@ type Experience = {
 }
 
 export type ResumeSliceActionPayloads = {
-  setResumeOptions: Partial
+  setResumeOptions: Partial<ResumeSlice>
 }
