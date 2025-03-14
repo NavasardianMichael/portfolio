@@ -7,6 +7,10 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  height: 100%;
+}
+
 @media only screen and (max-width: 368px) {
   html {
     font-size: 12px;

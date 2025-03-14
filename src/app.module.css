@@ -8,18 +8,18 @@
   }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .app {
     flex-wrap: wrap;
   }
 }
 
 ::-moz-selection {
-  color: #FFFF;
-  background: #39CCCC;
+  color: #ffff;
+  background: #39cccc;
 }
 
 ::selection {
-  color: #FFFF;
-  background: #39CCCC;
+  color: #ffff;
+  background: var(--contrast);
 }

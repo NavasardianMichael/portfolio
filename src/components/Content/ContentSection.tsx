@@ -9,7 +9,7 @@ type T_Props = {
 const ContentSection: FC<PropsWithChildren<T_Props>> = ({ children, id, title }) => {
   return (
     <div id={id} className={styles['content-section']}>
-      <h1 className={styles['content-section-title contrast-dark-title']}>{title}</h1>
+      <h1 className={styles['content-section-title']}>{title}</h1>
       {children}
     </div>
   )

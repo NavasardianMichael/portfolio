@@ -1,8 +1,8 @@
 import { ResumeSlice } from 'store/resume/types'
 import { RESUME_INITIAL_STATE } from 'helpers/constants/resume'
-import { SheetsAPIResonse } from './types'
+import { SheetsAPIResponse } from './types'
 
-export const processResume = (response: SheetsAPIResonse): ResumeSlice => {
+export const processResume = (response: SheetsAPIResponse): ResumeSlice => {
   const processed = response.values.reduce((acc, row) => {
     const [fieldName, uniqueRecordValue] = row
     if (!fieldName) return acc
@@ -41,7 +41,7 @@ export const processResume = (response: SheetsAPIResonse): ResumeSlice => {
         break
       }
       case 'education': {
-        const [, position, company, location, from, to] = row
+        const [, position, company, location, from, to, companyUrl] = row
         const items = acc[fieldName] as ResumeSlice['education']
         items.push({
           company,
@@ -49,11 +49,12 @@ export const processResume = (response: SheetsAPIResonse): ResumeSlice => {
           location,
           position,
           to,
+          companyUrl,
         })
         break
       }
       case 'experience': {
-        const [, position, company, location, from, to] = row
+        const [, position, company, location, from, to, companyUrl] = row
         const items = acc[fieldName] as ResumeSlice['experience']
         items.push({
           company,
@@ -61,6 +62,7 @@ export const processResume = (response: SheetsAPIResonse): ResumeSlice => {
           location,
           position,
           to,
+          companyUrl,
         })
         break
       }

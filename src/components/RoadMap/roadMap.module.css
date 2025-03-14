@@ -22,7 +22,7 @@
   transform: translate(-50%);
 }
 
-.resume-secion-title {
+.resume-section-title {
   font-size: 26px;
   margin-bottom: 20px;
 }
@@ -35,7 +35,8 @@
 
 .resume-section-initial-info {
   font-style: italic;
-  margin-bottom: 0;
+  color: #040b14;
+  display: block;
 }
 
 .list {
@@ -50,7 +51,6 @@
 .resume-section-item-activity-duration {
   display: inline-block;
   background-color: #e4edf9;
-  font-weight: 600;
   padding: 6px 16px;
   margin-top: 6px;
 }

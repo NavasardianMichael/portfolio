@@ -43,12 +43,14 @@ const Home: FC = () => {
 
   return (
     <div id="home" className={styles.home}>
+      <div className={styles.initials}>
       <h1 className={styles['home-full-name']}>{fullName}</h1>
       <h2 className={styles['profession-wrapper']}>
         I'm{HTML_SYMBOLS.space}
         <span className={styles['profession']}>{characteristics?.[currentTextIndex]?.slice?.(0, currentTextPosition) ?? 'N/A'}</span>
         <span className={blinkingClassName}>|</span>
       </h2>
+      </div>
     </div>
   )
 }

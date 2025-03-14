@@ -36,8 +36,9 @@ type Experience = {
   to?: string
   company: string
   location: string
+  companyUrl: string
 }
 
 export type ResumeSliceActionPayloads = {
-  setResumeOptions: Partial<ResumeSlice>
+  setResumeOptions: Partial
 }

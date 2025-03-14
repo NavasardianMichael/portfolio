@@ -1,34 +1,34 @@
 .content {
-    width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 .content-section {
-    background-color: var(--primaryLight);
-    padding: 4rem;
-    width: 100%;
+  background-color: var(--primaryLight);
+  padding: 4rem;
+  width: 100%;
 }
 
 .content-section-title {
-    display: inline-block;
-    font-size: 32px;
-    margin-top: 0;
-    margin-bottom: 20px;
+  display: inline-block;
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .content-section-title::after {
-    padding-bottom: 20px;
-    content: '';
-    display: block;
-    width: 70px;
-    height: 1px;
-    border-bottom: 3px solid var(--contrast);
+  padding-bottom: 20px;
+  content: '';
+  display: block;
+  width: 70px;
+  height: 1px;
+  border-bottom: 3px solid var(--contrast);
 }
 
 @media only screen and (max-width: 1024px) {
-    .content-section {
-        padding: 1.5rem;
-    }
+  .content-section {
+    padding: 1.5rem;
+  }
 }
