@@ -102,8 +102,8 @@
   }
 }
 
-@media only screen and (max-width: 769px) and (hover: none) {
-  .home-full-name {
-    margin-top: -100px;
+@media only screen and (max-width: 769px) {
+  .initials {
+    font-size: 12px;
   }
 }
