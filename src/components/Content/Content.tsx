@@ -14,8 +14,8 @@ const Content: FC = () => {
       <About />
       <Skills />
       <Resume />
-      <Publications />
       <Contributions />
+      <Publications />
     </div>
   )
 }

@@ -1,12 +1,13 @@
 .home {
   height: 100vh;
-  display: flex;
   padding-left: 10%;
-  flex-direction: column;
   justify-content: center;
   color: #ffff;
 
   .initials {
+    margin-left: auto;
+    margin-right: 100px;
+    margin-top: 360px;
     background-color: #040b148a;
     width: fit-content;
     padding: 1rem;
