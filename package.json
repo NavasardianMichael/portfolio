@@ -7,10 +7,11 @@
   "scripts": {
     "dev": "vite",
     "env:to-b64": "node scripts/env-to-base64.js",
+    "build:gh-pages": "cross-env VITE_BASE_PATH=/portfolio/ pnpm build",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "pnpm build",
+    "predeploy": "pnpm build:gh-pages",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -31,6 +32,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "cross-env": "^10.1.0",
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",

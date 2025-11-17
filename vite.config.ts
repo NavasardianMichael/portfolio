@@ -11,7 +11,7 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
-  base: '/portfolio/',
+  base: process.env.VITE_BASE_PATH || '/',
   build: {
     sourcemap: true,
   },
