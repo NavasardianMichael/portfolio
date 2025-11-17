@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "env:to-b64": "node scripts/env-to-base64.js",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",

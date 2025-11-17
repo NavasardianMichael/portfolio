@@ -63,7 +63,20 @@ jobs:
       # Creates optimized static files in the dist/ directory
       # Environment variables from GitHub Secrets are injected here
       - name: Build Application
-        run: pnpm run build
+        run: |
+          ENV_FILE_BASE64="${{ secrets.ENV_FILE_BASE64 }}"
+          # Create environment file from base64 secret (if provided)
+          if [ -n "$ENV_FILE_BASE64" ]; then
+            echo "$ENV_FILE_BASE64" | base64 -d > .env
+            chmod 600 .env
+            echo "✅ Environment file created"
+          fi
+          # Build the application
+          pnpm run build
+          # Remove environment file after build
+          if [ -f .env ]; then
+            rm .env
+          fi
         env:
           CI: false
 
